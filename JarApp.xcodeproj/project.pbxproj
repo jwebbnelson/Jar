@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		232874631AAA626A00F48B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874621AAA626A00F48B90 /* main.m */; };
 		232874661AAA626A00F48B90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874651AAA626A00F48B90 /* AppDelegate.m */; };
-		232874691AAA626A00F48B90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874681AAA626A00F48B90 /* ViewController.m */; };
 		2328746C1AAA626A00F48B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2328746A1AAA626A00F48B90 /* Main.storyboard */; };
 		2328746E1AAA626A00F48B90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2328746D1AAA626A00F48B90 /* Images.xcassets */; };
 		232874711AAA626A00F48B90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2328746F1AAA626A00F48B90 /* LaunchScreen.xib */; };
 		2328747D1AAA626A00F48B90 /* JarAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328747C1AAA626A00F48B90 /* JarAppTests.m */; };
+		232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874871AAA6A1B00F48B90 /* ShelfViewController.m */; };
+		2328748B1AAA6C8700F48B90 /* NewJarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328748A1AAA6C8700F48B90 /* NewJarViewController.m */; };
+		2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328748D1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m */; };
+		232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874901AAA765300F48B90 /* ShelfCollectionViewCell.m */; };
+		232874941AAA790C00F48B90 /* JarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874931AAA790C00F48B90 /* JarViewController.m */; };
+		232874971AAA793D00F48B90 /* FineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874961AAA793D00F48B90 /* FineViewController.m */; };
+		2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874991AAA79A500F48B90 /* JarTableViewDataSource.m */; };
+		2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,28 @@
 		232874621AAA626A00F48B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		232874641AAA626A00F48B90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		232874651AAA626A00F48B90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		232874671AAA626A00F48B90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		232874681AAA626A00F48B90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2328746B1AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2328746D1AAA626A00F48B90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		232874701AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		232874761AAA626A00F48B90 /* JarAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2328747B1AAA626A00F48B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2328747C1AAA626A00F48B90 /* JarAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JarAppTests.m; sourceTree = "<group>"; };
+		232874861AAA6A1B00F48B90 /* ShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfViewController.h; sourceTree = "<group>"; };
+		232874871AAA6A1B00F48B90 /* ShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfViewController.m; sourceTree = "<group>"; };
+		232874891AAA6C8700F48B90 /* NewJarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewJarViewController.h; sourceTree = "<group>"; };
+		2328748A1AAA6C8700F48B90 /* NewJarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewJarViewController.m; sourceTree = "<group>"; };
+		2328748C1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfCollectionViewDataSource.h; sourceTree = "<group>"; };
+		2328748D1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfCollectionViewDataSource.m; sourceTree = "<group>"; };
+		2328748F1AAA765300F48B90 /* ShelfCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfCollectionViewCell.h; sourceTree = "<group>"; };
+		232874901AAA765300F48B90 /* ShelfCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfCollectionViewCell.m; sourceTree = "<group>"; };
+		232874921AAA790C00F48B90 /* JarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarViewController.h; sourceTree = "<group>"; };
+		232874931AAA790C00F48B90 /* JarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarViewController.m; sourceTree = "<group>"; };
+		232874951AAA793D00F48B90 /* FineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FineViewController.h; sourceTree = "<group>"; };
+		232874961AAA793D00F48B90 /* FineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FineViewController.m; sourceTree = "<group>"; };
+		232874981AAA79A500F48B90 /* JarTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarTableViewDataSource.h; sourceTree = "<group>"; };
+		232874991AAA79A500F48B90 /* JarTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewDataSource.m; sourceTree = "<group>"; };
+		2328749B1AAA7A6300F48B90 /* JarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarTableViewCell.h; sourceTree = "<group>"; };
+		2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +104,8 @@
 			children = (
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
-				232874671AAA626A00F48B90 /* ViewController.h */,
-				232874681AAA626A00F48B90 /* ViewController.m */,
+				2328749E1AAA7B3000F48B90 /* Shelf */,
+				2328749F1AAA7B3E00F48B90 /* Jar */,
 				2328746A1AAA626A00F48B90 /* Main.storyboard */,
 				2328746D1AAA626A00F48B90 /* Images.xcassets */,
 				2328746F1AAA626A00F48B90 /* LaunchScreen.xib */,
@@ -117,6 +138,36 @@
 				2328747B1AAA626A00F48B90 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2328749E1AAA7B3000F48B90 /* Shelf */ = {
+			isa = PBXGroup;
+			children = (
+				232874861AAA6A1B00F48B90 /* ShelfViewController.h */,
+				232874871AAA6A1B00F48B90 /* ShelfViewController.m */,
+				2328748C1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.h */,
+				2328748D1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m */,
+				232874891AAA6C8700F48B90 /* NewJarViewController.h */,
+				2328748A1AAA6C8700F48B90 /* NewJarViewController.m */,
+				2328748F1AAA765300F48B90 /* ShelfCollectionViewCell.h */,
+				232874901AAA765300F48B90 /* ShelfCollectionViewCell.m */,
+			);
+			name = Shelf;
+			sourceTree = "<group>";
+		};
+		2328749F1AAA7B3E00F48B90 /* Jar */ = {
+			isa = PBXGroup;
+			children = (
+				232874921AAA790C00F48B90 /* JarViewController.h */,
+				232874931AAA790C00F48B90 /* JarViewController.m */,
+				2328749B1AAA7A6300F48B90 /* JarTableViewCell.h */,
+				2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */,
+				232874981AAA79A500F48B90 /* JarTableViewDataSource.h */,
+				232874991AAA79A500F48B90 /* JarTableViewDataSource.m */,
+				232874951AAA793D00F48B90 /* FineViewController.h */,
+				232874961AAA793D00F48B90 /* FineViewController.m */,
+			);
+			name = Jar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232874691AAA626A00F48B90 /* ViewController.m in Sources */,
+				232874971AAA793D00F48B90 /* FineViewController.m in Sources */,
+				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
+				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
+				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
+				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
+				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
+				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,
 				232874661AAA626A00F48B90 /* AppDelegate.m in Sources */,
 				232874631AAA626A00F48B90 /* main.m in Sources */,
+				2328748B1AAA6C8700F48B90 /* NewJarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

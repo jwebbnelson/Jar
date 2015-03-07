@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewJarViewController.h
 //  JarApp
 //
 //  Created by Jake Herrmann on 3/6/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewJarViewController : UIViewController
 
 @end
-
