@@ -12,7 +12,7 @@
 @implementation ShelfCollectionViewDataSource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 2;
+    return 6;
     
 }
 
