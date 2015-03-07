@@ -21,6 +21,7 @@
 		232874971AAA793D00F48B90 /* FineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874961AAA793D00F48B90 /* FineViewController.m */; };
 		2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874991AAA79A500F48B90 /* JarTableViewDataSource.m */; };
 		2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */; };
+		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		232874991AAA79A500F48B90 /* JarTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewDataSource.m; sourceTree = "<group>"; };
 		2328749B1AAA7A6300F48B90 /* JarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarTableViewCell.h; sourceTree = "<group>"; };
 		2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewCell.m; sourceTree = "<group>"; };
+		232874A31AAB874100F48B90 /* AddFineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFineViewController.h; sourceTree = "<group>"; };
+		232874A41AAB874100F48B90 /* AddFineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				232874991AAA79A500F48B90 /* JarTableViewDataSource.m */,
 				232874951AAA793D00F48B90 /* FineViewController.h */,
 				232874961AAA793D00F48B90 /* FineViewController.m */,
+				232874A31AAB874100F48B90 /* AddFineViewController.h */,
+				232874A41AAB874100F48B90 /* AddFineViewController.m */,
 			);
 			name = Jar;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				232874971AAA793D00F48B90 /* FineViewController.m in Sources */,
 				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
+				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
 				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,

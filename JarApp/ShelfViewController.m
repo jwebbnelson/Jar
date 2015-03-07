@@ -7,6 +7,7 @@
 //
 
 #import "ShelfViewController.h"
+#import "NewJarViewController.h"
 
 @interface ShelfViewController ()
 
@@ -22,6 +23,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)addButtonSelected:(id)sender {
+    NewJarViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"addJarVC"];
+    [self addChildViewController:viewController];
+    [self.view addSubview:viewController.view];
+    [viewController didMoveToParentViewController:self];
+    viewController.view.alpha = 0.8;
+    [[self navigationController] setNavigationBarHidden:YES];
+
 }
 
 /*
