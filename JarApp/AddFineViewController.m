@@ -10,7 +10,6 @@
 
 @interface AddFineViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *baseView;
 
 @end
 

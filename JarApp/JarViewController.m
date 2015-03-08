@@ -56,11 +56,16 @@
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
     
     [self addChildViewController:viewController];
+    viewController.view.transform = CGAffineTransformMakeScale(.5, .5);
     [self.view addSubview:viewController.view];
     
     [viewController didMoveToParentViewController:self];
-    viewController.view.alpha = 0.8;
+    viewController.baseView.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        viewController.view.transform = CGAffineTransformMakeScale(1, 1);
+    }];
 }
 
 /*
