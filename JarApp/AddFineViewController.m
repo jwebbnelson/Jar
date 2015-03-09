@@ -28,6 +28,12 @@
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
 }
+- (IBAction)submitFine:(id)sender {
+    self.view.alpha = 0;
+    [[self navigationController]setNavigationBarHidden:NO];
+    [self willMoveToParentViewController:nil];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

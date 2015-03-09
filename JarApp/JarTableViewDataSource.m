@@ -8,6 +8,7 @@
 
 #import "JarTableViewDataSource.h"
 #import "JarTableViewCell.h"
+#import "JarViewController.h"
 
 @implementation JarTableViewDataSource
 
@@ -21,5 +22,10 @@
     
     
 }
+
+-(NSArray *)sampleNames {
+    return @[@"Jake", @"Jordan", @"Wagner", @"Cole", @"Taylor"];
+}
+
 
 @end

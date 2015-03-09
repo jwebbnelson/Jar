@@ -56,7 +56,7 @@
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
     
     [self addChildViewController:viewController];
-    viewController.view.transform = CGAffineTransformMakeScale(.5, .5);
+    viewController.view.transform = CGAffineTransformMakeScale(.7, .7);
     [self.view addSubview:viewController.view];
     
     [viewController didMoveToParentViewController:self];
