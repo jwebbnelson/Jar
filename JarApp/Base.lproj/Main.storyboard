@@ -1,40 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hdY-Dl-Kxi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13r-SL-Tjf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--DefaultSettingsViewController-->
-        <scene sceneID="URx-UH-V5x">
-            <objects>
-                <viewController title="DefaultSettingsViewController" id="hdY-Dl-Kxi" customClass="DefaultSettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nbg-1j-u2x"/>
-                        <viewControllerLayoutGuide type="bottom" id="lb3-q5-maH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EMg-65-D3k" userLabel="View" customClass="defaul">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-os-tig">
-                                <rect key="frame" x="258" y="211" width="66" height="30"/>
-                                <state key="normal" title="Start App">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="13r-SL-Tjf" kind="show" id="ADu-ZK-cfq"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lwv-Ve-jgT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6pt-ga-G6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="307" y="1032"/>
-        </scene>
         <!--ShelfViewController-->
         <scene sceneID="d3k-zN-q4O">
             <objects>
@@ -354,18 +324,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-Vz-zDI">
-                                <rect key="frame" x="279" y="444" width="32" height="30"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="179" y="444" width="32" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="e1z-93-fwU" kind="show" id="vy6-ne-jvc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Keep on your friends by sending them to the Jar" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHH-3R-0Ng">
                                 <rect key="frame" x="115" y="52" width="370" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -375,13 +333,22 @@
                                     <rect key="frame" x="118" y="60" width="51" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-cH-7RE">
+                                <rect key="frame" x="277" y="338" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e1z-93-fwU" kind="show" id="ABz-1i-EPu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KwE-Vz-zDI" firstAttribute="leading" secondItem="5bu-5G-E7Y" secondAttribute="leadingMargin" constant="263" id="857-Jy-uE7"/>
                             <constraint firstItem="SHH-3R-0Ng" firstAttribute="leading" secondItem="5bu-5G-E7Y" secondAttribute="leadingMargin" constant="99" id="Vqh-Wu-Nnx"/>
+                            <constraint firstItem="8UP-kZ-ErB" firstAttribute="top" secondItem="YEm-cH-7RE" secondAttribute="bottom" constant="232" id="ZiR-3B-Vqi"/>
+                            <constraint firstItem="YEm-cH-7RE" firstAttribute="centerX" secondItem="SHH-3R-0Ng" secondAttribute="centerX" id="Zrh-jn-A1r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SHH-3R-0Ng" secondAttribute="trailing" constant="99" id="aXX-iO-qoW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KwE-Vz-zDI" secondAttribute="trailing" constant="273" id="d6P-E2-dvZ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -389,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="1080" y="-1006"/>
         </scene>
-        <!--View Controller-->
+        <!--My Login View Controller-->
         <scene sceneID="o6d-SI-ct7">
             <objects>
-                <viewController id="e1z-93-fwU" sceneMemberID="viewController">
+                <viewController id="e1z-93-fwU" customClass="MyLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Juc-tW-2rt"/>
                         <viewControllerLayoutGuide type="bottom" id="VmC-GD-WB8"/>
@@ -400,26 +367,7 @@
                     <view key="view" contentMode="scaleToFill" id="tDG-AR-Dtg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-vf-qlB">
-                                <rect key="frame" x="220" y="195" width="160" height="102"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Sign in">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="177" y="412" width="47" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="13r-SL-Tjf" kind="show" id="HEt-kD-k8m"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fOm-vf-qlB" firstAttribute="leading" secondItem="tDG-AR-Dtg" secondAttribute="leadingMargin" constant="204" id="EVg-fv-dGG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fOm-vf-qlB" secondAttribute="trailing" constant="204" id="Ik4-Kj-L2t"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBd-cR-eli" userLabel="First Responder" sceneMemberID="firstResponder"/>

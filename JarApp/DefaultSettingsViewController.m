@@ -28,7 +28,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:nil];
     
-    if (![PFUser currentUser]) { // No user logged in
+    if ([PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         MyLoginViewController *logInViewController = [[MyLoginViewController alloc] init];
         [logInViewController setDelegate:self];
