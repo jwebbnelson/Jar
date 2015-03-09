@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface DefaultSettingsViewController : UIViewController
+@interface DefaultSettingsViewController : UIViewController  <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
 
 @end
