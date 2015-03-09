@@ -12,16 +12,27 @@
                         <viewControllerLayoutGuide type="top" id="nbg-1j-u2x"/>
                         <viewControllerLayoutGuide type="bottom" id="lb3-q5-maH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EMg-65-D3k" customClass="defaul">
+                    <view key="view" contentMode="scaleToFill" id="EMg-65-D3k" userLabel="View" customClass="defaul">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-os-tig">
+                                <rect key="frame" x="258" y="211" width="66" height="30"/>
+                                <state key="normal" title="Start App">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="13r-SL-Tjf" kind="show" id="ADu-ZK-cfq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lwv-Ve-jgT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pt-ga-G6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="1110"/>
+            <point key="canvasLocation" x="307" y="1032"/>
         </scene>
         <!--ShelfViewController-->
         <scene sceneID="d3k-zN-q4O">
@@ -32,12 +43,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hdY-Dl-Kxi" kind="relationship" relationship="rootViewController" id="M7X-Z3-6Gd"/>
+                        <segue destination="nd8-ul-n2J" kind="relationship" relationship="rootViewController" id="lfG-EI-pfl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX5-aD-V9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.5" y="375"/>
+            <point key="canvasLocation" x="307" y="370"/>
         </scene>
         <!--Shelf-->
         <scene sceneID="K0R-rC-Kfs">

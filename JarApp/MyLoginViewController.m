@@ -19,7 +19,10 @@
     // Do any additional setup after loading the view.
     
     [self.logInView setBackgroundColor:[UIColor colorWithRed:0.36 green:0.79 blue:0.86 alpha:1]];
-    [self.logInView.signUpButton setBackgroundColor:[UIColor lightGrayColor]];
+    
+    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -28,14 +28,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:nil];
     
-    if ([PFUser currentUser]) { // No user logged in
+    if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
-//        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-//        [logInViewController setDelegate:self]; // Set ourselves as the delegate
-        
         MyLoginViewController *logInViewController = [[MyLoginViewController alloc] init];
         [logInViewController setDelegate:self];
-        
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
