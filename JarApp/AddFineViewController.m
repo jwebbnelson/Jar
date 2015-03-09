@@ -7,6 +7,7 @@
 //
 
 #import "AddFineViewController.h"
+#import "Fine.h"
 
 @interface AddFineViewController ()
 
@@ -32,6 +33,15 @@
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
+    
+    PFObject *fine = [PFObject objectWithClassName:@"Fine"];
+    
+    fine[@"Perp"] = self.perpTextField.text;
+    fine[@"Nark"] = [PFUser currentUser].username;
+    fine[@"Fee"] = self.fineTextField.text;
+    fine[@"Description"] = self.descriptionTextField.text;
+    
+    [fine saveInBackground];
 
 }
 

@@ -232,7 +232,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-8V-agi">
                                         <rect key="frame" x="56" y="74" width="237" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Why:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRb-9S-vX9">
                                         <rect key="frame" x="8" y="111" width="39" height="21"/>
@@ -288,6 +288,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="baseView" destination="EWr-kW-jl6" id="Tfk-GZ-Wsf"/>
+                        <outlet property="descriptionTextField" destination="w6R-5x-svB" id="5Zm-Bi-JMf"/>
+                        <outlet property="fineTextField" destination="LXp-8V-agi" id="Ex3-Kl-sZT"/>
+                        <outlet property="perpTextField" destination="qmC-as-Xnr" id="vhw-ys-h6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQu-SS-5bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-ud-nah">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-ud-nah">
                                 <rect key="frame" x="0.0" y="28" width="600" height="528"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-Jh-O3F">

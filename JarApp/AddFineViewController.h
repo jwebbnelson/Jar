@@ -12,4 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *baseView;
 
+@property (strong, nonatomic) IBOutlet UITextField *perpTextField;
+@property (strong, nonatomic) IBOutlet UITextField *fineTextField;
+@property (strong, nonatomic) IBOutlet UITextField *descriptionTextField;
+
 @end
