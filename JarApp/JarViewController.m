@@ -7,6 +7,7 @@
 //
 
 #import "JarViewController.h"
+#import "AddFineViewController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
@@ -43,13 +44,28 @@
 
 -(void)votedFair{
   UIAlertController *detailAlertController = [UIAlertController alertControllerWithTitle:@"You Voted Fair" message:@"Are you sure you want to fine them?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    [detailAlertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
+   
     
     [detailAlertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
     
+    [detailAlertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:detailAlertController animated:YES completion:nil];
     
+}
+- (IBAction)addButtonSelected:(id)sender {
+    AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
+    
+    [self addChildViewController:viewController];
+    viewController.view.transform = CGAffineTransformMakeScale(.5, .5);
+    [self.view addSubview:viewController.view];
+    
+    [viewController didMoveToParentViewController:self];
+    viewController.baseView.alpha = 0.8;
+    [[self navigationController] setNavigationBarHidden:YES];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        viewController.view.transform = CGAffineTransformMakeScale(1, 1);
+    }];
 }
 
 /*

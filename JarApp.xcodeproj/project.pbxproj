@@ -42,6 +42,7 @@
 		83877FE41AABB06A00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE21AABB06A00B0CED7 /* Parse.framework */; };
 		83877FE51AABB06A00B0CED7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE31AABB06A00B0CED7 /* ParseUI.framework */; };
 		8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */; };
+		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		83877FE61AABB0F400B0CED7 /* LogInAndSignUpDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogInAndSignUpDemo-Prefix.pch"; sourceTree = "<group>"; };
 		838780191AAE00A800B0CED7 /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginViewController.h; sourceTree = "<group>"; };
 		8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginViewController.m; sourceTree = "<group>"; };
+		232874A31AAB874100F48B90 /* AddFineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFineViewController.h; sourceTree = "<group>"; };
+		232874A41AAB874100F48B90 /* AddFineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				232874991AAA79A500F48B90 /* JarTableViewDataSource.m */,
 				232874951AAA793D00F48B90 /* FineViewController.h */,
 				232874961AAA793D00F48B90 /* FineViewController.m */,
+				232874A31AAB874100F48B90 /* AddFineViewController.h */,
+				232874A41AAB874100F48B90 /* AddFineViewController.m */,
 			);
 			name = Jar;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				232874971AAA793D00F48B90 /* FineViewController.m in Sources */,
 				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
+				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
 				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
 				8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,

@@ -1,33 +1,37 @@
 //
-//  NewJarViewController.m
+//  AddFineViewController.m
 //  JarApp
 //
-//  Created by Jake Herrmann on 3/6/15.
+//  Created by Jake Herrmann on 3/7/15.
 //  Copyright (c) 2015 Jake Herrmann. All rights reserved.
 //
 
-#import "NewJarViewController.h"
+#import "AddFineViewController.h"
 
-@interface NewJarViewController ()
+@interface AddFineViewController ()
+
 
 @end
 
-@implementation NewJarViewController
+@implementation AddFineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.baseView.alpha = 1.0;
+//    [self.baseView setAlpha:.5];
+
+
+}
+- (IBAction)closePopUp:(id)sender {
+    self.view.alpha = 0;
+    [[self navigationController]setNavigationBarHidden:NO];
+    [self willMoveToParentViewController:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)dismissPopOver:(id)sender {
-    self.view.alpha = 0;
-    [[self navigationController]setNavigationBarHidden:NO];
-    [self willMoveToParentViewController:nil];
-
 }
 
 /*
