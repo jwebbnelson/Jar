@@ -8,10 +8,13 @@
 
 #import "ShelfViewController.h"
 #import "NewJarViewController.h"
+#import <Parse/Parse.h>
+#import "Jar.h"
 
-@interface ShelfViewController ()
+@interface ShelfViewController () <UICollectionViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) PFQuery *query;
 
 @end
 
@@ -22,11 +25,11 @@
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
     
+    self.query =[PFQuery queryWithClassName:@"Jar"];
 }
 
 - (void)newJarReload {
     [self.collectionView reloadData];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +43,14 @@
     [viewController didMoveToParentViewController:self];
     viewController.view.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
+}
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSArray *objects = [self.query findObjects];
+    Jar *jars = [objects objectAtIndex:indexPath.row];
+    [Jar setCurrentJar:jars];
+    
 }
 
 /*

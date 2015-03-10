@@ -22,6 +22,7 @@
 		2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874991AAA79A500F48B90 /* JarTableViewDataSource.m */; };
 		2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */; };
 		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
+		832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C3D1AAF9B5B002331C0 /* Jar.m */; };
 		83877FB51AAB9DB600B0CED7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB31AAB9DB600B0CED7 /* Bolts.framework */; };
 		83877FB81AAB9E1D00B0CED7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB71AAB9E1D00B0CED7 /* AudioToolbox.framework */; };
 		83877FBA1AAB9E2600B0CED7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB91AAB9E2600B0CED7 /* CFNetwork.framework */; };
@@ -86,6 +87,8 @@
 		2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewCell.m; sourceTree = "<group>"; };
 		232874A31AAB874100F48B90 /* AddFineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFineViewController.h; sourceTree = "<group>"; };
 		232874A41AAB874100F48B90 /* AddFineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFineViewController.m; sourceTree = "<group>"; };
+		832C6C3C1AAF9B5A002331C0 /* Jar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jar.h; sourceTree = "<group>"; };
+		832C6C3D1AAF9B5B002331C0 /* Jar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jar.m; sourceTree = "<group>"; };
 		83877FB31AAB9DB600B0CED7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		83877FB71AAB9E1D00B0CED7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		83877FB91AAB9E2600B0CED7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,7 @@
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
 				838780331AAF40BE00B0CED7 /* Fine.h */,
 				838780341AAF40BE00B0CED7 /* Fine.m */,
+				832C6C3B1AAF9B37002331C0 /* New Group */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
@@ -249,6 +253,15 @@
 				232874A41AAB874100F48B90 /* AddFineViewController.m */,
 			);
 			name = Jar;
+			sourceTree = "<group>";
+		};
+		832C6C3B1AAF9B37002331C0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				832C6C3C1AAF9B5A002331C0 /* Jar.h */,
+				832C6C3D1AAF9B5B002331C0 /* Jar.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		83877FD01AABA73000B0CED7 /* Frameworks */ = {
@@ -395,6 +408,7 @@
 				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
 				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
 				8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */,
+				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
 				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,

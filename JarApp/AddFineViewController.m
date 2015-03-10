@@ -9,6 +9,7 @@
 #import "AddFineViewController.h"
 #import "Fine.h"
 #import "JarViewController.h"
+#import "Jar.h"
 
 @interface AddFineViewController ()
 
@@ -31,12 +32,16 @@
     [self willMoveToParentViewController:nil];
 }
 - (IBAction)submitFine:(id)sender {
+    
     PFObject *fine = [PFObject objectWithClassName:@"Fine"];
     
+   // [fine setObject:[Jar currentJar] forKey:@"Jar"];
+    fine[@"Jar"] = [Jar currentJar];
     fine[@"Perp"] = self.perpTextField.text;
     fine[@"Nark"] = [PFUser currentUser];
     fine[@"Fee"] = self.fineTextField.text;
     fine[@"Description"] = self.descriptionTextField.text;
+   
     
     [fine saveInBackground];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
