@@ -7,8 +7,13 @@
 //
 
 #import "NewJarViewController.h"
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @interface NewJarViewController ()
+
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UIButton *createJarButton;
 
 @end
 
@@ -27,6 +32,15 @@
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
 
+}
+- (IBAction)createJar:(id)sender {
+    
+    PFObject *jar = [PFObject objectWithClassName:@"Jar"];
+    jar[@"Title"] = self.nameTextField.text;
+    
+    [jar saveInBackground];
+    [self dismissPopOver:nil];
+    
 }
 
 /*

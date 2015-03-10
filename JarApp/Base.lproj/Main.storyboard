@@ -307,7 +307,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-ud-nah">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-ud-nah">
                                 <rect key="frame" x="0.0" y="28" width="600" height="528"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-Jh-O3F">
@@ -320,6 +320,26 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="dismissPopOver:" destination="zn9-sK-fyv" eventType="touchUpInside" id="6gG-0a-tnW"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-fr-ROS">
+                                                <rect key="frame" x="11" y="60" width="37" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zF-6Z-cOv">
+                                                <rect key="frame" x="70" y="56" width="250" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-y4-kkQ">
+                                                <rect key="frame" x="263" y="287" width="75" height="30"/>
+                                                <state key="normal" title="Create Jar!">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createJar:" destination="zn9-sK-fyv" eventType="touchUpInside" id="NXk-W1-fjr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -337,6 +357,10 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="createJarButton" destination="AWX-y4-kkQ" id="4ee-GW-ffx"/>
+                        <outlet property="nameTextField" destination="0zF-6Z-cOv" id="e4s-rp-F6O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pb-Ko-cBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="1N1-rc-OGO">
