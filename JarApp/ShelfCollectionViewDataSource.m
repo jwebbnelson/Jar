@@ -8,11 +8,26 @@
 
 #import "ShelfCollectionViewDataSource.h"
 #import "ShelfCollectionViewCell.h"
+#import <Parse/Parse.h>
+
+@interface ShelfCollectionViewDataSource ()
+
+@property (nonatomic, strong) PFQuery *query;
+
+@end
 
 @implementation ShelfCollectionViewDataSource
 
+-(instancetype)init {
+    self = [super init];
+    if (self){
+        self.query =[PFQuery queryWithClassName:@"Jar"];
+    }
+    return  self;
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 8;
+    return (NSInteger)[self.query countObjects];
     
 }
 

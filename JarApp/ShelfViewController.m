@@ -11,6 +11,8 @@
 
 @interface ShelfViewController ()
 
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation ShelfViewController
@@ -18,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
+    
+}
+
+- (void)newJarReload {
+    [self.collectionView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -63,6 +63,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Fre-Dr-qKq" id="Ycp-SS-XaM"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tvc-cS-TO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="3c9-At-erD" customClass="ShelfCollectionViewDataSource"/>

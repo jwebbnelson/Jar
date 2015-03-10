@@ -39,6 +39,8 @@
     jar[@"Title"] = self.nameTextField.text;
     
     [jar saveInBackground];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
+    
     [self dismissPopOver:nil];
     
 }
