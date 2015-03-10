@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) PFQuery *query;
 
+
 @end
 
 @implementation ShelfCollectionViewDataSource
@@ -34,6 +35,12 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ShelfCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    NSArray *objects = [self.query findObjects];
+    PFObject *object = [objects objectAtIndex:indexPath.row];
+    cell.titleLabel.text = object[@"Title"];
+//    self.amountLabel.text = object[@"]
+    
+    
     return cell;
 
 }

@@ -43,10 +43,40 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-IX-6Hg">
+                                            <rect key="frame" x="8" y="8" width="171" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="Fll-MO-DDv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ CASH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR0-Ro-FAT">
+                                            <rect key="frame" x="62" y="139" width="117" height="49"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="49" id="ALX-K5-np6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.50541644276369957" green="0.89585121843659354" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Mmj-IX-6Hg" firstAttribute="top" secondItem="Lc7-iV-EFL" secondAttribute="topMargin" id="5zF-da-s8H"/>
+                                    <constraint firstItem="Mmj-IX-6Hg" firstAttribute="leading" secondItem="Lc7-iV-EFL" secondAttribute="leadingMargin" id="VWA-iK-c9y"/>
+                                    <constraint firstItem="Mmj-IX-6Hg" firstAttribute="trailing" secondItem="Lc7-iV-EFL" secondAttribute="trailingMargin" id="dsI-zs-Q9u"/>
+                                    <constraint firstItem="UR0-Ro-FAT" firstAttribute="leading" secondItem="Lc7-iV-EFL" secondAttribute="leadingMargin" constant="54" id="epo-LO-FAc"/>
+                                    <constraint firstItem="UR0-Ro-FAT" firstAttribute="trailing" secondItem="Mmj-IX-6Hg" secondAttribute="trailing" id="mlg-ga-EP0"/>
+                                    <constraint firstItem="UR0-Ro-FAT" firstAttribute="bottom" secondItem="Lc7-iV-EFL" secondAttribute="bottomMargin" id="ogA-PD-9PS"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="cashLabel" destination="UR0-Ro-FAT" id="Pdi-qW-KhT"/>
+                                    <outlet property="titleLabel" destination="Mmj-IX-6Hg" id="L2m-l8-Kyn"/>
                                     <segue destination="9qo-yC-LIB" kind="show" id="C8K-aU-BMw"/>
                                 </connections>
                             </collectionViewCell>
@@ -346,7 +376,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.61757906490000003" green="0.74968672150000004" blue="0.91530539769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.66777546246525343" green="0.81054506971040574" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40550031565656564" green="0.32505273195042961" blue="0.33346042732266101" alpha="1" colorSpace="calibratedRGB"/>

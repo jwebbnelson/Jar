@@ -44,8 +44,6 @@
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
-    
-
 }
 
 - (void)didReceiveMemoryWarning {
