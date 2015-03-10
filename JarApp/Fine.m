@@ -10,4 +10,10 @@
 
 @implementation Fine
 
+//@dynamic name;
+
+// + (NSString *)parseClassName {
+//      return EntryClassName;
+//  }
+
 @end

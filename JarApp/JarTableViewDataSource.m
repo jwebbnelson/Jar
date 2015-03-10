@@ -14,19 +14,31 @@
 @interface JarTableViewDataSource()
 
 @property (readwrite, nonatomic) NSInteger count;
+@property (strong, nonatomic) PFQuery *query;
 
 @end
 
 @implementation JarTableViewDataSource
 
+-(instancetype)init {
+    self = [super init];
+    if (self){
+        
+        self.query =[PFQuery queryWithClassName:@"Fine"];
+    }
+    return  self;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
+     JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
+    NSArray *objects = [self.query findObjects];
+    PFObject *object = [objects objectAtIndex:indexPath.row];
+    cell.textLabel.text = object[@"Perp"];
+    cell.detailTextLabel.text = object[@"Fee"];
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-   
-    PFQuery *query = [PFQuery queryWithClassName:@"Fine"];
-    return (NSInteger)[query countObjects];
+    return (NSInteger)[self.query countObjects];
 }
 @end

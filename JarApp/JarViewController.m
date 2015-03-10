@@ -21,7 +21,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
 
-
 }
 
 - (void)newFineReload {

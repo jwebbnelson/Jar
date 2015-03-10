@@ -22,6 +22,9 @@
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
+
+    // [Fine registerSubClass];
+
     
     // Initialize Parse.
     [Parse setApplicationId:@"SEGFnPwQoJCeVQP6xNKRQzqIQ9uOLPULgi7XscK9"

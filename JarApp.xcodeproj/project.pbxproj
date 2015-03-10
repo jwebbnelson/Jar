@@ -40,10 +40,10 @@
 		83877FD81AABA96600B0CED7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FD71AABA96600B0CED7 /* Accounts.framework */; };
 		83877FDC1AABAA1900B0CED7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FDB1AABAA1900B0CED7 /* FacebookSDK.framework */; };
 		83877FDF1AABAE8200B0CED7 /* DefaultSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83877FDE1AABAE8200B0CED7 /* DefaultSettingsViewController.m */; };
-		83877FE41AABB06A00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE21AABB06A00B0CED7 /* Parse.framework */; };
 		83877FE51AABB06A00B0CED7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE31AABB06A00B0CED7 /* ParseUI.framework */; };
 		8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */; };
-		838780321AAE7A7100B0CED7 /* Fine.m in Sources */ = {isa = PBXBuildFile; fileRef = 838780311AAE7A7100B0CED7 /* Fine.m */; };
+		838780351AAF40BE00B0CED7 /* Fine.m in Sources */ = {isa = PBXBuildFile; fileRef = 838780341AAF40BE00B0CED7 /* Fine.m */; };
+		8387803B1AAF445C00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387803A1AAF445C00B0CED7 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,13 +105,15 @@
 		83877FDB1AABAA1900B0CED7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		83877FDD1AABAE8200B0CED7 /* DefaultSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultSettingsViewController.h; sourceTree = "<group>"; };
 		83877FDE1AABAE8200B0CED7 /* DefaultSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSettingsViewController.m; sourceTree = "<group>"; };
-		83877FE21AABB06A00B0CED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		83877FE31AABB06A00B0CED7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		83877FE61AABB0F400B0CED7 /* LogInAndSignUpDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogInAndSignUpDemo-Prefix.pch"; sourceTree = "<group>"; };
 		838780191AAE00A800B0CED7 /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginViewController.h; sourceTree = "<group>"; };
 		8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginViewController.m; sourceTree = "<group>"; };
 		838780301AAE7A7100B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
 		838780311AAE7A7100B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
+		838780331AAF40BE00B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
+		838780341AAF40BE00B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
+		8387803A1AAF445C00B0CED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +132,9 @@
 				83877FC81AAB9E6800B0CED7 /* SystemConfiguration.framework in Frameworks */,
 				83877FC61AAB9E5E00B0CED7 /* StoreKit.framework in Frameworks */,
 				83877FE51AABB06A00B0CED7 /* ParseUI.framework in Frameworks */,
-				83877FE41AABB06A00B0CED7 /* Parse.framework in Frameworks */,
 				83877FC41AAB9E5500B0CED7 /* Security.framework in Frameworks */,
 				83877FC21AAB9E4C00B0CED7 /* QuartzCore.framework in Frameworks */,
+				8387803B1AAF445C00B0CED7 /* Parse.framework in Frameworks */,
 				83877FC01AAB9E4400B0CED7 /* MobileCoreServices.framework in Frameworks */,
 				83877FBE1AAB9E3B00B0CED7 /* CoreLocation.framework in Frameworks */,
 				83877FBC1AAB9E3100B0CED7 /* CoreGraphics.framework in Frameworks */,
@@ -176,6 +178,8 @@
 			children = (
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
+				838780331AAF40BE00B0CED7 /* Fine.h */,
+				838780341AAF40BE00B0CED7 /* Fine.m */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
@@ -250,7 +254,7 @@
 		83877FD01AABA73000B0CED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83877FE21AABB06A00B0CED7 /* Parse.framework */,
+				8387803A1AAF445C00B0CED7 /* Parse.framework */,
 				83877FE31AABB06A00B0CED7 /* ParseUI.framework */,
 				83877FDB1AABAA1900B0CED7 /* FacebookSDK.framework */,
 				83877FD71AABA96600B0CED7 /* Accounts.framework */,
@@ -386,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				232874971AAA793D00F48B90 /* FineViewController.m in Sources */,
-				838780321AAE7A7100B0CED7 /* Fine.m in Sources */,
 				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
 				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
@@ -395,6 +398,7 @@
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
 				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,
+				838780351AAF40BE00B0CED7 /* Fine.m in Sources */,
 				232874661AAA626A00F48B90 /* AppDelegate.m in Sources */,
 				232874631AAA626A00F48B90 /* main.m in Sources */,
 				2328748B1AAA6C8700F48B90 /* NewJarViewController.m in Sources */,
