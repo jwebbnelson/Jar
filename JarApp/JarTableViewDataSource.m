@@ -34,6 +34,7 @@
      JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
    
     [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
+    [self.query orderByDescending:@"createdAt"];
 
     NSArray *objects = [self.query findObjects];
     PFObject *object = [objects objectAtIndex:indexPath.row];
