@@ -8,6 +8,7 @@
 
 #import "AddFineViewController.h"
 #import "Fine.h"
+#import "JarViewController.h"
 
 @interface AddFineViewController ()
 
@@ -30,18 +31,20 @@
     [self willMoveToParentViewController:nil];
 }
 - (IBAction)submitFine:(id)sender {
-    self.view.alpha = 0;
-    [[self navigationController]setNavigationBarHidden:NO];
-    [self willMoveToParentViewController:nil];
-    
     PFObject *fine = [PFObject objectWithClassName:@"Fine"];
     
     fine[@"Perp"] = self.perpTextField.text;
-    fine[@"Nark"] = [PFUser currentUser].username;
+    fine[@"Nark"] = [PFUser currentUser];
     fine[@"Fee"] = self.fineTextField.text;
     fine[@"Description"] = self.descriptionTextField.text;
     
     [fine saveInBackground];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
+    
+    self.view.alpha = 0;
+    [[self navigationController]setNavigationBarHidden:NO];
+    [self willMoveToParentViewController:nil];
+    
 
 }
 

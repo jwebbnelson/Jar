@@ -18,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
+
+
+}
+
+- (void)newFineReload {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

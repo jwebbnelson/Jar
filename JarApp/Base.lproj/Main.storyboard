@@ -139,6 +139,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TFH-hO-PYr" secondAttribute="trailing" constant="30" id="WFT-pI-x7v"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MXy-Yg-3va" id="IKm-nd-3nD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyN-hw-ZbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="rze-SO-R8Z" customClass="JarTableViewDataSource"/>

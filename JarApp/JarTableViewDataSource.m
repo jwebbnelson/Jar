@@ -9,6 +9,13 @@
 #import "JarTableViewDataSource.h"
 #import "JarTableViewCell.h"
 #import "JarViewController.h"
+#import <Parse/Parse.h>
+
+@interface JarTableViewDataSource()
+
+@property (readwrite, nonatomic) NSInteger count;
+
+@end
 
 @implementation JarTableViewDataSource
 
@@ -18,13 +25,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 1;
+   
+    PFQuery *query = [PFQuery queryWithClassName:@"Fine"];
+    return (NSInteger)[query countObjects];
 }
-
--(NSArray *)sampleNames {
-    return @[@"Jake", @"Jordan", @"Wagner", @"Cole", @"Taylor"];
-}
-
-
 @end

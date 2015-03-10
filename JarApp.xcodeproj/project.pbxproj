@@ -43,7 +43,7 @@
 		83877FE41AABB06A00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE21AABB06A00B0CED7 /* Parse.framework */; };
 		83877FE51AABB06A00B0CED7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FE31AABB06A00B0CED7 /* ParseUI.framework */; };
 		8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */; };
-		8387802F1AAE521100B0CED7 /* Fine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387802E1AAE521000B0CED7 /* Fine.m */; };
+		838780321AAE7A7100B0CED7 /* Fine.m in Sources */ = {isa = PBXBuildFile; fileRef = 838780311AAE7A7100B0CED7 /* Fine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,8 +110,8 @@
 		83877FE61AABB0F400B0CED7 /* LogInAndSignUpDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogInAndSignUpDemo-Prefix.pch"; sourceTree = "<group>"; };
 		838780191AAE00A800B0CED7 /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginViewController.h; sourceTree = "<group>"; };
 		8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginViewController.m; sourceTree = "<group>"; };
-		8387802D1AAE521000B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
-		8387802E1AAE521000B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
+		838780301AAE7A7100B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
+		838780311AAE7A7100B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +157,8 @@
 				2328745F1AAA626900F48B90 /* JarApp */,
 				232874791AAA626A00F48B90 /* JarAppTests */,
 				2328745E1AAA626900F48B90 /* Products */,
+				838780301AAE7A7100B0CED7 /* Fine.h */,
+				838780311AAE7A7100B0CED7 /* Fine.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,8 +176,6 @@
 			children = (
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
-				8387802D1AAE521000B0CED7 /* Fine.h */,
-				8387802E1AAE521000B0CED7 /* Fine.m */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
@@ -386,7 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				232874971AAA793D00F48B90 /* FineViewController.m in Sources */,
-				8387802F1AAE521100B0CED7 /* Fine.m in Sources */,
+				838780321AAE7A7100B0CED7 /* Fine.m in Sources */,
 				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
 				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
