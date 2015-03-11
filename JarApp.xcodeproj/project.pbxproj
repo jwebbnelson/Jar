@@ -118,8 +118,6 @@
 		83877FE61AABB0F400B0CED7 /* LogInAndSignUpDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogInAndSignUpDemo-Prefix.pch"; sourceTree = "<group>"; };
 		838780191AAE00A800B0CED7 /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginViewController.h; sourceTree = "<group>"; };
 		8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginViewController.m; sourceTree = "<group>"; };
-		838780301AAE7A7100B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
-		838780311AAE7A7100B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
 		838780331AAF40BE00B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
 		838780341AAF40BE00B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
 		8387803A1AAF445C00B0CED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -168,8 +166,6 @@
 				2328745F1AAA626900F48B90 /* JarApp */,
 				232874791AAA626A00F48B90 /* JarAppTests */,
 				2328745E1AAA626900F48B90 /* Products */,
-				838780301AAE7A7100B0CED7 /* Fine.h */,
-				838780311AAE7A7100B0CED7 /* Fine.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,19 +183,14 @@
 			children = (
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
-				832C6C3F1AAFD9A3002331C0 /* ASValuePopUpView.h */,
-				832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */,
-				832C6C411AAFD9A3002331C0 /* ASValueTrackingSlider.h */,
-				832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */,
 				832C6C3B1AAF9B37002331C0 /* New Group */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
+				832C6C451AB09D47002331C0 /* Slider */,
 				2328746A1AAA626A00F48B90 /* Main.storyboard */,
-				2328746D1AAA626A00F48B90 /* Images.xcassets */,
-				2328746F1AAA626A00F48B90 /* LaunchScreen.xib */,
-				83877FD01AABA73000B0CED7 /* Frameworks */,
 				232874601AAA626900F48B90 /* Supporting Files */,
+				83877FD01AABA73000B0CED7 /* Frameworks */,
 			);
 			path = JarApp;
 			sourceTree = "<group>";
@@ -207,6 +198,8 @@
 		232874601AAA626900F48B90 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2328746D1AAA626A00F48B90 /* Images.xcassets */,
+				2328746F1AAA626A00F48B90 /* LaunchScreen.xib */,
 				83877FE61AABB0F400B0CED7 /* LogInAndSignUpDemo-Prefix.pch */,
 				232874611AAA626A00F48B90 /* Info.plist */,
 				232874621AAA626A00F48B90 /* main.m */,
@@ -272,6 +265,17 @@
 				832C6C3D1AAF9B5B002331C0 /* Jar.m */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		832C6C451AB09D47002331C0 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				832C6C3F1AAFD9A3002331C0 /* ASValuePopUpView.h */,
+				832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */,
+				832C6C411AAFD9A3002331C0 /* ASValueTrackingSlider.h */,
+				832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */,
+			);
+			name = Slider;
 			sourceTree = "<group>";
 		};
 		83877FD01AABA73000B0CED7 /* Frameworks */ = {

@@ -46,7 +46,6 @@
     
     PFObject *fine = [PFObject objectWithClassName:@"Fine"];
     
-   // [fine setObject:[Jar currentJar] forKey:@"Jar"];
     fine[@"Jar"] = [Jar currentJar];
     fine[@"Perp"] = self.perpTextField.text;
     fine[@"Nark"] = [PFUser currentUser];

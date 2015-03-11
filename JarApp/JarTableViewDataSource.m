@@ -24,7 +24,6 @@
 -(instancetype)init {
     self = [super init];
     if (self){
-        
         self.query =[PFQuery queryWithClassName:@"Fine"];
     }
     return  self;
@@ -47,4 +46,5 @@
     [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
     return (NSInteger)[self.query countObjects];
 }
+
 @end
