@@ -13,7 +13,7 @@
 
 @interface AddFineViewController ()
 
-@property (nonatomic, readwrite) float stepperValue;
+@property (nonatomic, strong) NSNumber *stepperValue;
 
 @end
 
@@ -28,7 +28,11 @@
 
 }
 - (IBAction)sliderChanged:(id)sender {
-    self.stepperValue = self.fineSlider.value;
+    float sliderValue = self.fineSlider.value;
+    NSString *numberString = [NSString stringWithFormat:@"%.2f",sliderValue];
+    
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    self.stepperValue = [formatter numberFromString:numberString];
 }
 
 
@@ -46,8 +50,7 @@
     fine[@"Jar"] = [Jar currentJar];
     fine[@"Perp"] = self.perpTextField.text;
     fine[@"Nark"] = [PFUser currentUser];
-    NSNumber *sliderValue = [NSNumber numberWithFloat:self.stepperValue];
-    fine[@"Fee"] = sliderValue;
+    fine[@"Fee"] = self.stepperValue;
     fine[@"Description"] = self.descriptionTextField.text;
     
     [fine saveInBackground];
