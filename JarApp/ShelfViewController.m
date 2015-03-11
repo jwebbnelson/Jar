@@ -26,6 +26,23 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
+
+    // Deleting TableViewCells
+//    [self.collectionView performBatchUpdates:^{
+//        NSArray *selectedItemsIndexPath = [self.collectionView indexPathsForSelectedItems];
+//        [self deletItemsFromDataSourceAtIndexPath:selectedItemsIndexPath];
+//        [self.collectionView deleteItemsAtIndexPaths:selectedItemsIndexPath];
+//    } completion:nil];
+//    
+}
+
+-(void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
+    
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    
+    for (NSIndexPath *indexPath in itemPaths) {
+        [indexSet addIndex:indexPath.row];
+    }
 }
 
 - (void)newJarReload {
@@ -52,6 +69,8 @@
     [Jar setCurrentJar:jars];
     
 }
+
+
 
 /*
 #pragma mark - Navigation

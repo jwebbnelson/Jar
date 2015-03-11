@@ -13,6 +13,7 @@
 
 @interface AddFineViewController ()
 
+@property (nonatomic, readwrite) float stepperValue;
 
 @end
 
@@ -26,11 +27,17 @@
 
 
 }
+- (IBAction)sliderChanged:(id)sender {
+    self.stepperValue = self.fineSlider.value;
+}
+
+
 - (IBAction)closePopUp:(id)sender {
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
 }
+
 - (IBAction)submitFine:(id)sender {
     
     PFObject *fine = [PFObject objectWithClassName:@"Fine"];
@@ -39,9 +46,9 @@
     fine[@"Jar"] = [Jar currentJar];
     fine[@"Perp"] = self.perpTextField.text;
     fine[@"Nark"] = [PFUser currentUser];
-    fine[@"Fee"] = self.fineTextField.text;
+    NSNumber *sliderValue = [NSNumber numberWithFloat:self.stepperValue];
+    fine[@"Fee"] = sliderValue;
     fine[@"Description"] = self.descriptionTextField.text;
-   
     
     [fine saveInBackground];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];

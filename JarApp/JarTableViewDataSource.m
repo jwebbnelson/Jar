@@ -39,7 +39,7 @@
     NSArray *objects = [self.query findObjects];
     PFObject *object = [objects objectAtIndex:indexPath.row];
     cell.textLabel.text = object[@"Perp"];
-    cell.detailTextLabel.text = object[@"Fee"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%@",object[@"Fee"]];
     return cell;
 }
 

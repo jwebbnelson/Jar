@@ -40,10 +40,10 @@
     cell.titleLabel.text = object[@"Title"];
 //    self.amountLabel.text = object[@"]
     
-    
     return cell;
 
 }
+
 
 
 
