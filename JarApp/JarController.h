@@ -10,4 +10,6 @@
 
 @interface JarController : NSObject
 
++ (JarController *)sharedInstance;
+
 @end

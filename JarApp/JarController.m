@@ -10,4 +10,14 @@
 
 @implementation JarController
 
++ (JarController *)sharedInstance {
+    static JarController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[JarController alloc] init];
+    });
+    return sharedInstance;
+}
+
+
 @end

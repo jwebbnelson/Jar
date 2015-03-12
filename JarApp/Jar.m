@@ -16,7 +16,9 @@ static Jar * currentJar;
 
 @implementation Jar
 
+//@dynamic currentJar;
 @dynamic name;
+@dynamic jarID;
 
  + (NSString *)parseClassName {
       return @"Jar";

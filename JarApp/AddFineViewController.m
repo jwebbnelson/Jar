@@ -11,7 +11,7 @@
 #import "JarViewController.h"
 #import "Jar.h"
 
-@interface AddFineViewController ()
+@interface AddFineViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSNumber *stepperValue;
 
@@ -58,6 +58,11 @@
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -47,6 +47,8 @@
 		8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */; };
 		838780351AAF40BE00B0CED7 /* Fine.m in Sources */ = {isa = PBXBuildFile; fileRef = 838780341AAF40BE00B0CED7 /* Fine.m */; };
 		8387803B1AAF445C00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387803A1AAF445C00B0CED7 /* Parse.framework */; };
+		83CDF5711AB2294A000A90E3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CDF5701AB2294A000A90E3 /* Parse.framework */; };
+		83CDF5741AB2316A000A90E3 /* JarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CDF5731AB2316A000A90E3 /* JarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,9 @@
 		838780331AAF40BE00B0CED7 /* Fine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fine.h; sourceTree = "<group>"; };
 		838780341AAF40BE00B0CED7 /* Fine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fine.m; sourceTree = "<group>"; };
 		8387803A1AAF445C00B0CED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		83CDF5701AB2294A000A90E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		83CDF5721AB2316A000A90E3 /* JarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarController.h; sourceTree = "<group>"; };
+		83CDF5731AB2316A000A90E3 /* JarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,7 @@
 				83877FC41AAB9E5500B0CED7 /* Security.framework in Frameworks */,
 				83877FC21AAB9E4C00B0CED7 /* QuartzCore.framework in Frameworks */,
 				8387803B1AAF445C00B0CED7 /* Parse.framework in Frameworks */,
+				83CDF5711AB2294A000A90E3 /* Parse.framework in Frameworks */,
 				83877FC01AAB9E4400B0CED7 /* MobileCoreServices.framework in Frameworks */,
 				83877FBE1AAB9E3B00B0CED7 /* CoreLocation.framework in Frameworks */,
 				83877FBC1AAB9E3100B0CED7 /* CoreGraphics.framework in Frameworks */,
@@ -263,6 +269,8 @@
 				838780341AAF40BE00B0CED7 /* Fine.m */,
 				832C6C3C1AAF9B5A002331C0 /* Jar.h */,
 				832C6C3D1AAF9B5B002331C0 /* Jar.m */,
+				83CDF5721AB2316A000A90E3 /* JarController.h */,
+				83CDF5731AB2316A000A90E3 /* JarController.m */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				8387803A1AAF445C00B0CED7 /* Parse.framework */,
+				83CDF5701AB2294A000A90E3 /* Parse.framework */,
 				83877FE31AABB06A00B0CED7 /* ParseUI.framework */,
 				83877FDB1AABAA1900B0CED7 /* FacebookSDK.framework */,
 				83877FD71AABA96600B0CED7 /* Accounts.framework */,
@@ -433,6 +442,7 @@
 				832C6C431AAFD9A3002331C0 /* ASValuePopUpView.m in Sources */,
 				2328748B1AAA6C8700F48B90 /* NewJarViewController.m in Sources */,
 				83877FDF1AABAE8200B0CED7 /* DefaultSettingsViewController.m in Sources */,
+				83CDF5741AB2316A000A90E3 /* JarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
