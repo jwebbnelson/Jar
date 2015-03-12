@@ -10,4 +10,7 @@
 
 @interface JarViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong) NSString *jarTitle;
+
 @end

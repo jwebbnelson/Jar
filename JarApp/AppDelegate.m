@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Fine.h"
 
 
 @interface AppDelegate ()
@@ -22,6 +23,8 @@
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
+
+    [Fine registerSubclass];
     
     // Initialize Parse.
     [Parse setApplicationId:@"SEGFnPwQoJCeVQP6xNKRQzqIQ9uOLPULgi7XscK9"

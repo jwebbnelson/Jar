@@ -7,8 +7,14 @@
 //
 
 #import "NewJarViewController.h"
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import "JarController.h"
 
-@interface NewJarViewController ()
+@interface NewJarViewController () <UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UIButton *createJarButton;
 
 @end
 
@@ -16,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +39,15 @@
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
 
+}
+- (IBAction)createJar:(id)sender {    
+    
+    [[JarController sharedInstance] addJarWithTitle:self.nameTextField.text];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
+    
+    [self dismissPopOver:nil];
+    
 }
 
 /*

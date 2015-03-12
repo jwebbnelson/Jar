@@ -7,9 +7,14 @@
 //
 
 #import "AddFineViewController.h"
+#import "Fine.h"
+#import "JarViewController.h"
+#import "Jar.h"
+#import "FineController.h"
 
-@interface AddFineViewController ()
+@interface AddFineViewController () <UITextFieldDelegate>
 
+@property (nonatomic, strong) NSNumber *stepperValue;
 
 @end
 
@@ -18,21 +23,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.stepperValue = [NSNumber numberWithInt:1];
+   
     self.baseView.alpha = 1.0;
 //    [self.baseView setAlpha:.5];
-
-
 }
+
+
+
+- (IBAction)sliderChanged:(id)sender {
+    float sliderValue = self.fineSlider.value;
+    NSString *numberString = [NSString stringWithFormat:@"%.2f",sliderValue];
+    
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    self.stepperValue = [formatter numberFromString:numberString];
+}
+
+
 - (IBAction)closePopUp:(id)sender {
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
 }
+
 - (IBAction)submitFine:(id)sender {
+
+    [[FineController sharedInstance] addFineWith:self.perpTextField.text description:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
+
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
+    
+    [self.descriptionTextField resignFirstResponder];
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];
+}
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

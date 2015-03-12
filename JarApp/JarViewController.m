@@ -8,8 +8,12 @@
 
 #import "JarViewController.h"
 #import "AddFineViewController.h"
+#import "FineController.h"
 
 @interface JarViewController () <UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *totalLabel;
+@property (strong, nonatomic) NSString *label;
 
 @end
 
@@ -18,6 +22,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
+    
+    self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    
+    self.totalLabel.text = self.label;
+
+}
+
+- (void)newFineReload {
+    
+     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.totalLabel.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.totalLabel.text = self.label;
+        [UIView animateWithDuration:2 animations:^{
+            self.totalLabel.alpha = 1;
+        }];
+    }];
+    
+   // [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
+    [UIView transitionWithView:self.tableView duration:.9f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [self.tableView reloadData];
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
