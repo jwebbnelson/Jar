@@ -52,6 +52,7 @@
 
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
     
+    [self.descriptionTextField resignFirstResponder];
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
     [self willMoveToParentViewController:nil];

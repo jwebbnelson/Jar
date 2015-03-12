@@ -13,7 +13,7 @@
 @interface JarViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *totalLabel;
-@property (strong, nonatomic) IBOutlet NSString *label;
+@property (strong, nonatomic) NSString *label;
 
 @end
 
@@ -35,17 +35,19 @@
     
      self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
-    [UIView animateWithDuration:0.4 animations:^{
+    [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
     } completion:^(BOOL finished) {
         self.totalLabel.text = self.label;
-        [UIView animateWithDuration:1.5 animations:^{
+        [UIView animateWithDuration:2 animations:^{
             self.totalLabel.alpha = 1;
         }];
     }];
     
-    [self.tableView reloadData];
-    
+   // [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
+    [UIView transitionWithView:self.tableView duration:.9f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [self.tableView reloadData];
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
