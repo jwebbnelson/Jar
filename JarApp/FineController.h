@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+#import "Fine.h"
+#import "Jar.h"
 
 @interface FineController : NSObject
+
++(FineController *)sharedInstance;
+
+-(void)addFineWith:(NSString *)perp description:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee;
 
 @end
