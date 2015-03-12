@@ -10,6 +10,7 @@
 #import "Fine.h"
 #import "JarViewController.h"
 #import "Jar.h"
+#import "FineController.h"
 
 @interface AddFineViewController () <UITextFieldDelegate>
 
@@ -22,11 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.stepperValue = [NSNumber numberWithInt:1];
+   
     self.baseView.alpha = 1.0;
 //    [self.baseView setAlpha:.5];
-
-
 }
+
+
+
 - (IBAction)sliderChanged:(id)sender {
     float sliderValue = self.fineSlider.value;
     NSString *numberString = [NSString stringWithFormat:@"%.2f",sliderValue];
@@ -43,16 +47,9 @@
 }
 
 - (IBAction)submitFine:(id)sender {
-    
-    PFObject *fine = [PFObject objectWithClassName:@"Fine"];
-    
-    fine[@"Jar"] = [Jar currentJar];
-    fine[@"Perp"] = self.perpTextField.text;
-    fine[@"Nark"] = [PFUser currentUser];
-    fine[@"Fee"] = self.stepperValue;
-    fine[@"Description"] = self.descriptionTextField.text;
-    
-    [fine saveInBackground];
+
+    [[FineController sharedInstance] addFineWith:self.perpTextField.text description:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
+
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
     
     self.view.alpha = 0;

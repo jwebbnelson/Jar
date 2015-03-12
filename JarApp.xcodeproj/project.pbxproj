@@ -49,6 +49,7 @@
 		8387803B1AAF445C00B0CED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387803A1AAF445C00B0CED7 /* Parse.framework */; };
 		83CDF5711AB2294A000A90E3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CDF5701AB2294A000A90E3 /* Parse.framework */; };
 		83CDF5741AB2316A000A90E3 /* JarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CDF5731AB2316A000A90E3 /* JarController.m */; };
+		83CDF5771AB2381C000A90E3 /* FineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CDF5761AB2381C000A90E3 /* FineController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		83CDF5701AB2294A000A90E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		83CDF5721AB2316A000A90E3 /* JarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarController.h; sourceTree = "<group>"; };
 		83CDF5731AB2316A000A90E3 /* JarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarController.m; sourceTree = "<group>"; };
+		83CDF5751AB2381C000A90E3 /* FineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FineController.h; sourceTree = "<group>"; };
+		83CDF5761AB2381C000A90E3 /* FineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FineController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +274,8 @@
 				832C6C3D1AAF9B5B002331C0 /* Jar.m */,
 				83CDF5721AB2316A000A90E3 /* JarController.h */,
 				83CDF5731AB2316A000A90E3 /* JarController.m */,
+				83CDF5751AB2381C000A90E3 /* FineController.h */,
+				83CDF5761AB2381C000A90E3 /* FineController.m */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
+				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
 				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,
 				838780351AAF40BE00B0CED7 /* Fine.m in Sources */,
