@@ -171,6 +171,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="MXy-Yg-3va" id="IKm-nd-3nD"/>
+                        <outlet property="totalLabel" destination="TFH-hO-PYr" id="DoJ-xl-yvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyN-hw-ZbX" userLabel="First Responder" sceneMemberID="firstResponder"/>

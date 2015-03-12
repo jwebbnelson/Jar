@@ -23,10 +23,8 @@
 
 -(NSArray *)jars {
     PFQuery *query = [Jar query];
-    // [query fromLocalDatastore];
     return [query findObjects];
 }
-
 
 -(void)addJarWithTitle:(NSString *)title {
     PFObject *jar = [PFObject objectWithClassName:@"Jar"];

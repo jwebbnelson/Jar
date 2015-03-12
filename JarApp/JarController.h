@@ -11,6 +11,7 @@
 @interface JarController : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *jars;
+@property (nonatomic, readwrite) float fineTotal;
 
 + (JarController *)sharedInstance;
 

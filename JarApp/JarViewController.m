@@ -8,8 +8,11 @@
 
 #import "JarViewController.h"
 #import "AddFineViewController.h"
+#import "FineController.h"
 
 @interface JarViewController () <UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end
 
@@ -21,6 +24,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
 
+    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
 }
 
 - (void)newFineReload {

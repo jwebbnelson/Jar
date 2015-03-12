@@ -7,7 +7,13 @@
 //
 
 #import "FineController.h"
+#import "Jar.h"
 
+@interface FineController ()
+
+@property (nonatomic,strong) PFQuery *query;
+
+@end
 
 @implementation FineController
 
@@ -33,4 +39,15 @@
     [fine saveInBackground];
 }
 
+-(NSNumber *)fineTotal {
+    self.query = [Fine query];
+    
+    [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
+    
+    NSArray *objects = [self.query findObjects];
+    
+    NSNumber *fineSum = [objects valueForKeyPath:@"@sum.Fee"];
+    
+    return fineSum;
+}
 @end

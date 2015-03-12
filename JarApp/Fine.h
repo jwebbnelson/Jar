@@ -8,9 +8,9 @@
 
 #import <Parse/Parse.h>
 
-@interface Fine : PFObject //<PFSubclassing>
+@interface Fine : PFObject <PFSubclassing>
 
 // @property (nonatomic,strong) NSString *name;
-// +(NSString *)parseClassName
++(NSString *)parseClassName;
 
 @end

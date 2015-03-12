@@ -12,8 +12,8 @@
 
 //@dynamic name;
 
-// + (NSString *)parseClassName {
-//      return EntryClassName;
-//  }
+ + (NSString *)parseClassName {
+      return @"Fine";
+  }
 
 @end
