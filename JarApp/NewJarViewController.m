@@ -9,6 +9,7 @@
 #import "NewJarViewController.h"
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import "JarController.h"
 
 @interface NewJarViewController ()
 
@@ -33,12 +34,10 @@
     [self willMoveToParentViewController:nil];
 
 }
-- (IBAction)createJar:(id)sender {
+- (IBAction)createJar:(id)sender {    
     
-    PFObject *jar = [PFObject objectWithClassName:@"Jar"];
-    jar[@"Title"] = self.nameTextField.text;
+    [[JarController sharedInstance] addJarWithTitle:self.nameTextField.text];
     
-    [jar saveInBackground];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
     
     [self dismissPopOver:nil];

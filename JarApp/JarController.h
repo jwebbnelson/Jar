@@ -10,6 +10,10 @@
 
 @interface JarController : NSObject
 
+@property (nonatomic, strong, readonly) NSArray *jars;
+
 + (JarController *)sharedInstance;
+
+-(void)addJarWithTitle:(NSString *)title;
 
 @end

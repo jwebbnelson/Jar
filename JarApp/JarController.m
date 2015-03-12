@@ -7,6 +7,8 @@
 //
 
 #import "JarController.h"
+#import "Jar.h"
+#import <Parse/Parse.h>
 
 @implementation JarController
 
@@ -19,5 +21,18 @@
     return sharedInstance;
 }
 
+-(NSArray *)jars {
+    PFQuery *query = [Jar query];
+    // [query fromLocalDatastore];
+    return [query findObjects];
+}
 
+
+-(void)addJarWithTitle:(NSString *)title {
+    PFObject *jar = [PFObject objectWithClassName:@"Jar"];
+    jar[@"Title"] = title;
+    
+    [jar saveInBackground];
+    
+}
 @end
