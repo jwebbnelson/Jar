@@ -11,7 +11,7 @@
 #import <ParseUI/ParseUI.h>
 #import "JarController.h"
 
-@interface NewJarViewController ()
+@interface NewJarViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *createJarButton;
@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
