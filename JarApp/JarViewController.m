@@ -13,6 +13,7 @@
 @interface JarViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *totalLabel;
+@property (strong, nonatomic) IBOutlet NSString *label;
 
 @end
 
@@ -23,12 +24,28 @@
     // Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
+    
+    self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    
+    self.totalLabel.text = self.label;
 
-    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
 }
 
 - (void)newFineReload {
+    
+     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.totalLabel.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.totalLabel.text = self.label;
+        [UIView animateWithDuration:1.5 animations:^{
+            self.totalLabel.alpha = 1;
+        }];
+    }];
+    
     [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {

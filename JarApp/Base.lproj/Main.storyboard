@@ -148,7 +148,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="12.67" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFH-hO-PYr">
-                                <rect key="frame" x="51" y="48" width="503" height="208"/>
+                                <rect key="frame" x="16" y="48" width="568" height="208"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLightItalic" family="Helvetica Neue" pointSize="107"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,8 +165,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TFH-hO-PYr" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leadingMargin" constant="35" id="Rmh-Pa-cbx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TFH-hO-PYr" secondAttribute="trailing" constant="30" id="WFT-pI-x7v"/>
+                            <constraint firstItem="TFH-hO-PYr" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leadingMargin" id="Rmh-Pa-cbx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TFH-hO-PYr" secondAttribute="trailing" id="WFT-pI-x7v"/>
                         </constraints>
                     </view>
                     <connections>
