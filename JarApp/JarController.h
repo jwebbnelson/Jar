@@ -7,14 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+
+#import "Fine.h"
+#import "Jar.h"
 
 @interface JarController : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *jars;
-@property (nonatomic, readwrite) float fineTotal;
+@property (nonatomic, readwrite)NSNumber *fineTotal;
 
 + (JarController *)sharedInstance;
 
 -(void)addJarWithTitle:(NSString *)title;
+
+-(void)addFineWith:(NSString *)perp description:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee;
+
+-(NSNumber *)fineTotal;
+
 
 @end

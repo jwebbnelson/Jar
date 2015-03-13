@@ -8,7 +8,6 @@
 
 #import "ShelfViewController.h"
 #import "NewJarViewController.h"
-#import <Parse/Parse.h>
 #import "Jar.h"
 
 @interface ShelfViewController () <UICollectionViewDelegate>
