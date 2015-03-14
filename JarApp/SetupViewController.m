@@ -7,8 +7,12 @@
 //
 
 #import "SetupViewController.h"
+#import <Parse/Parse.h>
 
 @interface SetupViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *UserNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *UserEmailLabel;
+
 
 @end
 
@@ -16,7 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.UserNameLabel.text = [PFUser currentUser].username;
+    self.UserEmailLabel.text = [PFUser currentUser].email;
+
+    
+
+
+}
+- (IBAction)logOut:(id)sender {
+
+
+
 }
 
 - (void)didReceiveMemoryWarning {

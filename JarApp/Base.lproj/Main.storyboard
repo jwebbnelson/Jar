@@ -34,13 +34,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SettupUserPic" translatesAutoresizingMaskIntoConstraints="NO" id="4Nb-sP-tG8">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SettupUserPic" translatesAutoresizingMaskIntoConstraints="NO" id="4Nb-sP-tG8">
                                 <rect key="frame" x="215" y="72" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="K8M-9c-hE6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4V-wr-wv5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4V-wr-wv5">
                                 <rect key="frame" x="208" y="250" width="177" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="KVo-ne-FRo"/>
@@ -50,20 +50,11 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkF-JN-qVl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkF-JN-qVl">
                                 <rect key="frame" x="151" y="297" width="290" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NI4-Gw-TMJ"/>
                                     <constraint firstAttribute="width" constant="290" id="eN1-9L-GiA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-u1-2M6">
-                                <rect key="frame" x="151" y="331" width="290" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="9VS-l0-IDc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,6 +70,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOut:" destination="nmv-Jd-6VS" eventType="touchUpInside" id="z9U-rA-tFI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QnK-xv-oO6">
                                 <rect key="frame" x="16" y="431" width="568" height="121"/>
@@ -103,12 +97,9 @@ JWJ is not responsable for collecting and distributing fines.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Nb-sP-tG8" firstAttribute="trailing" secondItem="g4V-wr-wv5" secondAttribute="trailing" id="5zf-yY-fkN"/>
-                            <constraint firstItem="YyY-u1-2M6" firstAttribute="top" secondItem="dkF-JN-qVl" secondAttribute="bottom" constant="13" id="82k-cF-KiG"/>
                             <constraint firstItem="Xi5-c5-x4T" firstAttribute="centerX" secondItem="QnK-xv-oO6" secondAttribute="centerX" id="8Rr-vP-oBg"/>
-                            <constraint firstItem="YyY-u1-2M6" firstAttribute="trailing" secondItem="dkF-JN-qVl" secondAttribute="trailing" id="K2l-dh-y7V"/>
                             <constraint firstItem="dkF-JN-qVl" firstAttribute="top" secondItem="g4V-wr-wv5" secondAttribute="bottom" constant="26" id="MvP-97-0PV"/>
                             <constraint firstItem="QnK-xv-oO6" firstAttribute="leading" secondItem="wED-EJ-ClX" secondAttribute="leadingMargin" id="O8r-Dn-a7w"/>
-                            <constraint firstItem="Xi5-c5-x4T" firstAttribute="top" secondItem="YyY-u1-2M6" secondAttribute="bottom" constant="27" id="PNP-XJ-5iw"/>
                             <constraint firstItem="4Nb-sP-tG8" firstAttribute="centerX" secondItem="Xi5-c5-x4T" secondAttribute="centerX" id="e92-zm-Zqz"/>
                             <constraint firstItem="J0Y-xh-mPZ" firstAttribute="top" secondItem="QnK-xv-oO6" secondAttribute="bottom" constant="48" id="fvp-eg-oyg"/>
                             <constraint firstItem="QnK-xv-oO6" firstAttribute="top" secondItem="Xi5-c5-x4T" secondAttribute="bottom" constant="22" id="gXl-ZX-6oT"/>
@@ -116,9 +107,12 @@ JWJ is not responsable for collecting and distributing fines.</string>
                             <constraint firstItem="4Nb-sP-tG8" firstAttribute="top" secondItem="Yt2-4g-7ZR" secondAttribute="bottom" constant="8" symbolic="YES" id="sVr-gV-q1i"/>
                             <constraint firstItem="g4V-wr-wv5" firstAttribute="top" secondItem="4Nb-sP-tG8" secondAttribute="bottom" constant="8" symbolic="YES" id="t8g-UM-HMh"/>
                             <constraint firstItem="dkF-JN-qVl" firstAttribute="centerX" secondItem="g4V-wr-wv5" secondAttribute="centerX" id="tNk-wN-YZm"/>
-                            <constraint firstItem="dkF-JN-qVl" firstAttribute="leading" secondItem="YyY-u1-2M6" secondAttribute="leading" id="xfg-aV-rDp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="UserEmailLabel" destination="dkF-JN-qVl" id="NmI-5c-APo"/>
+                        <outlet property="UserNameLabel" destination="g4V-wr-wv5" id="MS8-f9-Oj2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7W-1q-s8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
