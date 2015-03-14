@@ -22,6 +22,8 @@
 		2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874991AAA79A500F48B90 /* JarTableViewDataSource.m */; };
 		2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */; };
 		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
+		83061A0B1AB4BE8D0008BE27 /* JarLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */; };
+		83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */; };
 		832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C3D1AAF9B5B002331C0 /* Jar.m */; };
 		832C6C431AAFD9A3002331C0 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */; };
 		832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */; };
@@ -92,6 +94,10 @@
 		2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewCell.m; sourceTree = "<group>"; };
 		232874A31AAB874100F48B90 /* AddFineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFineViewController.h; sourceTree = "<group>"; };
 		232874A41AAB874100F48B90 /* AddFineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFineViewController.m; sourceTree = "<group>"; };
+		83061A091AB4BE8D0008BE27 /* JarLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarLoginViewController.h; sourceTree = "<group>"; };
+		83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarLoginViewController.m; sourceTree = "<group>"; };
+		83061A0C1AB4BF8A0008BE27 /* JarSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarSignUpViewController.h; sourceTree = "<group>"; };
+		83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarSignUpViewController.m; sourceTree = "<group>"; };
 		832C6C3C1AAF9B5A002331C0 /* Jar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jar.h; sourceTree = "<group>"; };
 		832C6C3D1AAF9B5B002331C0 /* Jar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jar.m; sourceTree = "<group>"; };
 		832C6C3F1AAFD9A3002331C0 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
@@ -265,6 +271,13 @@
 			name = Jar;
 			sourceTree = "<group>";
 		};
+		83061A0F1AB4C0590008BE27 /* Login/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login/SignUp;
+			sourceTree = "<group>";
+		};
 		832C6C3B1AAF9B37002331C0 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +339,11 @@
 				83877FDE1AABAE8200B0CED7 /* DefaultSettingsViewController.m */,
 				838780191AAE00A800B0CED7 /* MyLoginViewController.h */,
 				8387801A1AAE00A800B0CED7 /* MyLoginViewController.m */,
+				83061A091AB4BE8D0008BE27 /* JarLoginViewController.h */,
+				83061A0F1AB4C0590008BE27 /* Login/SignUp */,
+				83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */,
+				83061A0C1AB4BF8A0008BE27 /* JarSignUpViewController.h */,
+				83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -434,11 +452,13 @@
 				2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */,
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
 				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
+				83061A0B1AB4BE8D0008BE27 /* JarLoginViewController.m in Sources */,
 				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
 				8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */,
 				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
+				83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */,
 				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
 				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,
