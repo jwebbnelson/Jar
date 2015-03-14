@@ -49,6 +49,7 @@
 		83CDF5741AB2316A000A90E3 /* JarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CDF5731AB2316A000A90E3 /* JarController.m */; };
 		83CDF5771AB2381C000A90E3 /* FineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CDF5761AB2381C000A90E3 /* FineController.m */; };
 		BCB0F7C01AB39FD800E64062 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB0F7BF1AB39FD800E64062 /* Parse.framework */; };
+		BCB0F7C31AB4C8A200E64062 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB0F7C21AB4C8A200E64062 /* SetupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		83CDF5751AB2381C000A90E3 /* FineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FineController.h; sourceTree = "<group>"; };
 		83CDF5761AB2381C000A90E3 /* FineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FineController.m; sourceTree = "<group>"; };
 		BCB0F7BF1AB39FD800E64062 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BCB0F7C11AB4C8A200E64062 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		BCB0F7C21AB4C8A200E64062 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +193,9 @@
 				2328746A1AAA626A00F48B90 /* Main.storyboard */,
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
-				832C6C3B1AAF9B37002331C0 /* New Group */,
+				BCB0F7C11AB4C8A200E64062 /* SetupViewController.h */,
+				BCB0F7C21AB4C8A200E64062 /* SetupViewController.m */,
+				832C6C3B1AAF9B37002331C0 /* Fine */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
@@ -262,7 +267,7 @@
 			name = Jar;
 			sourceTree = "<group>";
 		};
-		832C6C3B1AAF9B37002331C0 /* New Group */ = {
+		832C6C3B1AAF9B37002331C0 /* Fine */ = {
 			isa = PBXGroup;
 			children = (
 				838780331AAF40BE00B0CED7 /* Fine.h */,
@@ -274,7 +279,7 @@
 				83CDF5751AB2381C000A90E3 /* FineController.h */,
 				83CDF5761AB2381C000A90E3 /* FineController.m */,
 			);
-			name = "New Group";
+			name = Fine;
 			sourceTree = "<group>";
 		};
 		832C6C451AB09D47002331C0 /* Slider */ = {
@@ -434,6 +439,7 @@
 				8387801B1AAE00A800B0CED7 /* MyLoginViewController.m in Sources */,
 				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */,
+				BCB0F7C31AB4C8A200E64062 /* SetupViewController.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
 				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
