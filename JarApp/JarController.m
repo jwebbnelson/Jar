@@ -7,13 +7,8 @@
 //
 
 #import "JarController.h"
-
-@interface JarController ()
-
-
-@property (nonatomic,strong) PFQuery *query;
-
-@end
+#import "Jar.h"
+#import <Parse/Parse.h>
 
 @implementation JarController
 
@@ -38,31 +33,4 @@
     [jar saveInBackground];
     
 }
-
--(void)addFineWith:(NSString *)perp description:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee {
-    
-    PFObject *fine = [PFObject objectWithClassName:@"Fine"];
-    
-    fine[@"Jar"] = jar;
-    fine[@"Perp"] = perp;
-    fine[@"Nark"] = nark;
-    fine[@"Fee"] = fee;
-    fine[@"Description"] = description;
-    
-    [fine saveInBackground];
-}
-
-
--(NSNumber *)fineTotal {
-    self.query = [Fine query];
-    
-    [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
-    
-    NSArray *objects = [self.query findObjects];
-    
-    NSNumber *fineSum = [objects valueForKeyPath:@"@sum.Fee"];
-    
-    return fineSum;
-}
-
 @end

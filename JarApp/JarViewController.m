@@ -8,7 +8,7 @@
 
 #import "JarViewController.h"
 #import "AddFineViewController.h"
-#import "JarController.h"
+#import "FineController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
@@ -25,7 +25,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
-    self.label = [NSString stringWithFormat:@"$%.2f", [[JarController sharedInstance].fineTotal floatValue]];
+    self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
     self.totalLabel.text = self.label;
 
@@ -33,7 +33,7 @@
 
 - (void)newFineReload {
     
-     self.label = [NSString stringWithFormat:@"$%.2f", [[JarController sharedInstance].fineTotal floatValue]];
+     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
     [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
@@ -44,9 +44,10 @@
         }];
     }];
     
-    [self.tableView reloadData];
-    
-   
+   // [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
+    [UIView transitionWithView:self.tableView duration:.9f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [self.tableView reloadData];
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

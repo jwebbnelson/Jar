@@ -10,7 +10,7 @@
 #import "Fine.h"
 #import "JarViewController.h"
 #import "Jar.h"
-#import "JarController.h"
+#import "FineController.h"
 
 @interface AddFineViewController () <UITextFieldDelegate>
 
@@ -48,7 +48,7 @@
 
 - (IBAction)submitFine:(id)sender {
 
-    [[JarController sharedInstance] addFineWith:self.perpTextField.text description:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
+    [[FineController sharedInstance] addFineWith:self.perpTextField.text description:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
 
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
     
