@@ -89,7 +89,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Shelf" id="dYG-te-9uR">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="RI7-NB-dcO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="MER-EZ-iTS"/>
+                        <barButtonItem key="rightBarButtonItem" image="AddJarIcon" id="RI7-NB-dcO">
+                            <color key="tintColor" red="0.22352941179999999" green="0.64313725489999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addButtonSelected:" destination="nd8-ul-n2J" id="XQu-uh-9cN"/>
                             </connections>
@@ -565,6 +567,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddJarIcon" width="39" height="60"/>
         <image name="Close-50" width="25" height="25"/>
         <image name="Plus-50-2" width="50" height="50"/>
     </resources>
