@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
-@interface JarSignUpViewController : UIViewController
+@interface JarSignUpViewController : PFSignUpViewController <PFSignUpViewControllerDelegate>
 
 @end

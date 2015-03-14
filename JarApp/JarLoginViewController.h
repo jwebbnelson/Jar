@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface JarLoginViewController : UIViewController
+@interface JarLoginViewController : PFLogInViewController <PFLogInViewControllerDelegate>
 
 @end
