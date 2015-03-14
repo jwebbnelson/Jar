@@ -16,11 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
   
-  //  [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
+    [self.logInView setBackgroundColor:[UIColor lightGrayColor]];
+   [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
 
-    
     
     
 }
@@ -45,6 +44,7 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    NSLog(@"USER LOGGED IN");
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -57,6 +57,7 @@
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     NSLog(@"User dismissed the logInViewController");
 }
+
 
 
 /*
