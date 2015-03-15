@@ -302,7 +302,7 @@ JWJ is not responsable for collecting and distributing fines.</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="MXy-Yg-3va" id="IKm-nd-3nD"/>
-                        <outlet property="totalLabel" destination="TFH-hO-PYr" id="DoJ-xl-yvI"/>
+                        <outlet property="totalLabel" destination="TFH-hO-PYr" id="RFQ-y7-EhX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyN-hw-ZbX" userLabel="First Responder" sceneMemberID="firstResponder"/>

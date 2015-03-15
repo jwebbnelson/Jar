@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSString *jarTitle;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end

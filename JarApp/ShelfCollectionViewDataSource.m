@@ -47,7 +47,7 @@
 }
 
 - (IBAction)deleteJar:(id)sender {
-    
+    //This action will start when a longPressGesture at a cell on the CollectionView.
     UILongPressGestureRecognizer *delete = [UILongPressGestureRecognizer new];
     delete = sender;
     
@@ -56,7 +56,7 @@
     }else if (delete.state == UIGestureRecognizerStateEnded) {
         
         ShelfViewController *viewController = [ShelfViewController new];
-        #error Need to identify the indexPath of the cell selected.
+//        #error Need to identify the indexPath of the cell selected.
 //      [viewController deleteJarWithID:self.indexObject];
         
     }

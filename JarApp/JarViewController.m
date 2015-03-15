@@ -12,7 +12,6 @@
 
 @interface JarViewController () <UITableViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) NSString *label;
 
 @end
