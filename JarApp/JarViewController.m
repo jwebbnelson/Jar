@@ -54,15 +54,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Details" message:@"Jake fined Jordan for not doing dishes" preferredStyle:UIAlertControllerStyleAlert];
     
+    //Alert Controller for voting
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Details" message:@"Jake fined Jordan for not doing dishes" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Fair" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self votedFair];
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@" Not Fair" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Not Fair" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"Voted Not Fair");
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler: nil]];
@@ -71,13 +72,11 @@
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
-
--(void)votedFair{
-  UIAlertController *detailAlertController = [UIAlertController alertControllerWithTitle:@"You Voted Fair" message:@"Are you sure you want to fine them?" preferredStyle:UIAlertControllerStyleAlert];
-   
+- (void)votedFair{
+    //Confirmation of voting.
+    UIAlertController *detailAlertController = [UIAlertController alertControllerWithTitle:@"You Voted Fair" message:@"Are you sure you want to fine them?" preferredStyle:UIAlertControllerStyleAlert];
     
     [detailAlertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-    
     [detailAlertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:detailAlertController animated:YES completion:nil];
     
