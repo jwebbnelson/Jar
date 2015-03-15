@@ -8,11 +8,14 @@
 
 #import "ShelfCollectionViewDataSource.h"
 #import "ShelfCollectionViewCell.h"
+#import "ShelfViewController.h"
 #import <Parse/Parse.h>
+#import <stdlib.h>
 
 @interface ShelfCollectionViewDataSource ()
 
 @property (nonatomic, strong) PFQuery *query;
+@property (nonatomic, strong) PFObject *indexObject;
 
 
 @end
@@ -36,12 +39,28 @@
     
     ShelfCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
     NSArray *objects = [self.query findObjects];
-    PFObject *object = [objects objectAtIndex:indexPath.row];
-    cell.titleLabel.text = object[@"Title"];
-//    self.amountLabel.text = object[@"]
+    self.indexObject = [objects objectAtIndex:indexPath.row];
+    cell.titleLabel.text = self.indexObject[@"Title"];
     
     return cell;
 
+}
+
+- (IBAction)deleteJar:(id)sender {
+    
+    UILongPressGestureRecognizer *delete = [UILongPressGestureRecognizer new];
+    delete = sender;
+    
+    if (delete.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"Began");
+    }else if (delete.state == UIGestureRecognizerStateEnded) {
+        
+        ShelfViewController *viewController = [ShelfViewController new];
+        #error Need to identify the indexPath of the cell selected.
+//      [viewController deleteJarWithID:self.indexObject];
+        
+    }
+    
 }
 
 

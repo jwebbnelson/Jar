@@ -27,16 +27,24 @@
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
 
-    // Deleting TableViewCells
-//    [self.collectionView performBatchUpdates:^{
-//        NSArray *selectedItemsIndexPath = [self.collectionView indexPathsForSelectedItems];
-//        [self deletItemsFromDataSourceAtIndexPath:selectedItemsIndexPath];
-//        [self.collectionView deleteItemsAtIndexPaths:selectedItemsIndexPath];
-//    } completion:nil];
-//    
 }
 
--(void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
+- (void)deleteJarWithID:(NSIndexPath *)idex {
+    //Notification from bottom asking if "you're sure to delete the Jar?"
+    UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"Delete Jar" message:@"Are you sure you want to delete the Jar and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE JAR" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        NSLog(@"DELETE FROM PARSE THE JAR AND FINES");
+        //delete from Parse >> PUT CODE HERE
+    }]];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        return; //Cancel the action
+    }]];
+    
+    
+
+}
+
+- (void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
     
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
     
@@ -48,7 +56,6 @@
 - (void)newJarReload {
     [self.collectionView reloadData];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -61,8 +68,7 @@
     viewController.view.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
 }
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     NSArray *objects = [self.query findObjects];
     Jar *jars = [objects objectAtIndex:indexPath.row];

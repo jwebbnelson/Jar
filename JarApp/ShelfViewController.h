@@ -10,4 +10,7 @@
 
 @interface ShelfViewController : UICollectionViewController
 
+
+- (void)deleteJarWithID:(NSIndexPath *)idex;
+
 @end

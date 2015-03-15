@@ -160,9 +160,11 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="cashLabel" destination="UR0-Ro-FAT" id="Pdi-qW-KhT"/>
                                     <outlet property="titleLabel" destination="Mmj-IX-6Hg" id="L2m-l8-Kyn"/>
+                                    <outletCollection property="gestureRecognizers" destination="4fq-mC-VgO" appends="YES" id="1gJ-dk-DAq"/>
                                     <segue destination="9qo-yC-LIB" kind="show" id="C8K-aU-BMw"/>
                                 </connections>
                             </collectionViewCell>
@@ -199,6 +201,11 @@ JWJ is not responsable for collecting and distributing fines.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tvc-cS-TO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="3c9-At-erD" customClass="ShelfCollectionViewDataSource"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="4fq-mC-VgO">
+                    <connections>
+                        <action selector="deleteJar:" destination="3c9-At-erD" id="JdI-4H-wKc"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1032" y="370"/>
         </scene>
