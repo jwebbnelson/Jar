@@ -49,6 +49,8 @@
     [self dismissPopOver:nil];
     
 }
+- (IBAction)addJarMemebers:(id)sender {
+}
 
 /*
 #pragma mark - Navigation

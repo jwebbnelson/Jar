@@ -7,7 +7,10 @@
 //
 
 #import "ShelfViewController.h"
+#import "ShelfCollectionViewCell.h"
 #import "NewJarViewController.h"
+#import "JarViewController.h"
+#import <Parse/Parse.h>
 #import "Jar.h"
 
 @interface ShelfViewController () <UICollectionViewDelegate>
@@ -26,16 +29,24 @@
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
 
-    // Deleting TableViewCells
-//    [self.collectionView performBatchUpdates:^{
-//        NSArray *selectedItemsIndexPath = [self.collectionView indexPathsForSelectedItems];
-//        [self deletItemsFromDataSourceAtIndexPath:selectedItemsIndexPath];
-//        [self.collectionView deleteItemsAtIndexPaths:selectedItemsIndexPath];
-//    } completion:nil];
-//    
 }
 
--(void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
+- (void)deleteJarWithID:(NSIndexPath *)index {
+    
+    //Notification from bottom asking if "you're sure to delete the Jar?"
+    
+    UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"Delete Jar" message:@"Are you sure you want to delete the Jar and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE JAR" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        NSLog(@"DELETE FROM PARSE THE JAR AND FINES");
+        //delete from Parse >> PUT CODE HERE
+    }]];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        return; //Cancel the action
+    }]];
+
+}
+
+- (void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
     
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
     
@@ -43,11 +54,9 @@
         [indexSet addIndex:indexPath.row];
     }
 }
-
 - (void)newJarReload {
     [self.collectionView reloadData];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -60,25 +69,12 @@
     viewController.view.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
 }
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     NSArray *objects = [self.query findObjects];
     Jar *jars = [objects objectAtIndex:indexPath.row];
     [Jar setCurrentJar:jars];
     
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

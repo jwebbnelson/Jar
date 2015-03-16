@@ -30,17 +30,18 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
-   
+    JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
+    
     [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
     [self.query orderByDescending:@"createdAt"];
-
+    
     NSArray *objects = [self.query findObjects];
     PFObject *object = [objects objectAtIndex:indexPath.row];
     
+    //TableViewCell text with Fee, Perp and Description.
+    cell.textLabel.text = [NSString stringWithFormat:@"$%@ - %@",object[@"Fee"],object[@"Perp"]];
+    cell.detailTextLabel.text = object[@"Description"];
     
-    cell.textLabel.text = object[@"Perp"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%@",object[@"Fee"]];
     return cell;
 }
 
