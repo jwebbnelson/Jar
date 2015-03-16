@@ -9,10 +9,13 @@
 #import "JarViewController.h"
 #import "AddFineViewController.h"
 #import "FineController.h"
+#import "JarController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) NSString *label;
+@property (weak, nonatomic) IBOutlet UILabel *jarTitleLabel;
+@property (nonatomic, strong) PFQuery *query;
 
 @end
 
@@ -25,15 +28,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
-    
     self.totalLabel.text = self.label;
-
+//    self.jarTitleLabel.text = ;
+    
 }
-
 - (void)newFineReload {
     
      self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
+    //Animation
     [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
     } completion:^(BOOL finished) {
@@ -48,7 +51,6 @@
         [self.tableView reloadData];
     } completion:nil];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -72,7 +74,7 @@
     
 }
 - (void)votedFair{
-    //Confirmation of voting.
+//Confirmation of voting.
     UIAlertController *detailAlertController = [UIAlertController alertControllerWithTitle:@"You Voted Fair" message:@"Are you sure you want to fine them?" preferredStyle:UIAlertControllerStyleAlert];
     
     [detailAlertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
@@ -81,6 +83,7 @@
     
 }
 - (IBAction)addButtonSelected:(id)sender {
+//Add Fine
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
     
     [self addChildViewController:viewController];
@@ -88,22 +91,44 @@
     [self.view addSubview:viewController.view];
     
     [viewController didMoveToParentViewController:self];
-    viewController.baseView.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
+    //line is commented because the view cannot be transparent.
+    //viewController.baseView.alpha = 0.8;
     
     [UIView animateWithDuration:0.4 animations:^{
         viewController.view.transform = CGAffineTransformMakeScale(1, 1);
     }];
+}//add Fines
+- (IBAction)deleteJar:(id)sender {//delete Jar and Fines
+    
+//Notification from bottom asking if "you're sure to delete the Jar?"
+    UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"DELETE JAR" message:@"Are you sure you want to delete this JAR and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+
+//delete from Parse >> PUT CODE HERE
+      [[JarController sharedInstance]deleteJar:[Jar currentJar]];
+        NSLog(@"DELETE FROM PARSE THE JAR AND FINES");
+//After deleting the Jar and Fines, Push back to ShelfViewController:
+        
+    }]];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        return; //Cancel the action
+    }]];
+
+    [self presentViewController:deleteController animated:YES completion:nil];
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
+
+
+
+
+
+
+
 
 @end

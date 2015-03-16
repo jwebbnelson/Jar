@@ -24,28 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
 
 }
-
-- (void)deleteJarWithID:(NSIndexPath *)index {
-    
-    //Notification from bottom asking if "you're sure to delete the Jar?"
-    
-    UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"Delete Jar" message:@"Are you sure you want to delete the Jar and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
-    [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE JAR" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-        NSLog(@"DELETE FROM PARSE THE JAR AND FINES");
-        //delete from Parse >> PUT CODE HERE
-    }]];
-    [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        return; //Cancel the action
-    }]];
-
-}
-
 - (void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
     
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];

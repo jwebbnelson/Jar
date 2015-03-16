@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+#import "Jar.h"
 
 @interface JarController : NSObject
 
@@ -15,6 +17,7 @@
 
 + (JarController *)sharedInstance;
 
--(void)addJarWithTitle:(NSString *)title;
+- (void)addJarWithTitle:(NSString *)title;
+- (void)deleteJar:(PFObject *)jarObject;
 
 @end

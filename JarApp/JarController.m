@@ -7,8 +7,7 @@
 //
 
 #import "JarController.h"
-#import "Jar.h"
-#import <Parse/Parse.h>
+
 
 @implementation JarController
 
@@ -33,4 +32,13 @@
     [jar saveInBackground];
     
 }
+
+- (void)deleteJar:(PFObject *)jarObject {
+
+    PFObject *jar = [PFObject objectWithClassName:@"Jar"];
+    jar = jarObject;
+    [jarObject deleteInBackground];
+    
+}
+
 @end

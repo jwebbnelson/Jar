@@ -21,15 +21,14 @@
 
 @implementation JarTableViewDataSource
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if (self){
         self.query =[PFQuery queryWithClassName:@"Fine"];
     }
     return  self;
 }
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
     
     [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
@@ -44,10 +43,8 @@
     
     return cell;
 }
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
     return (NSInteger)[self.query countObjects];
 }
-
 @end

@@ -164,7 +164,6 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                 <connections>
                                     <outlet property="cashLabel" destination="UR0-Ro-FAT" id="Pdi-qW-KhT"/>
                                     <outlet property="titleLabel" destination="Mmj-IX-6Hg" id="L2m-l8-Kyn"/>
-                                    <outletCollection property="gestureRecognizers" destination="4fq-mC-VgO" appends="YES" id="1gJ-dk-DAq"/>
                                     <segue destination="9qo-yC-LIB" kind="show" id="C8K-aU-BMw"/>
                                 </connections>
                             </collectionViewCell>
@@ -201,11 +200,6 @@ JWJ is not responsable for collecting and distributing fines.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tvc-cS-TO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="3c9-At-erD" customClass="ShelfCollectionViewDataSource"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="4fq-mC-VgO">
-                    <connections>
-                        <action selector="deleteJar:" destination="3c9-At-erD" id="JdI-4H-wKc"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1032" y="370"/>
         </scene>
@@ -228,12 +222,8 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.67" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFH-hO-PYr">
-                                <rect key="frame" x="126" y="72" width="349" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="2lV-XY-RJT"/>
-                                    <constraint firstAttribute="width" constant="349" id="4vs-Hr-IPe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="95"/>
+                                <rect key="frame" x="63" y="116" width="476" height="86"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="16" y="48" width="368" height="208"/>
@@ -270,12 +260,34 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                     <outlet property="delegate" destination="9qo-yC-LIB" id="OIy-3W-BG0"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oko-7G-5La">
-                                <rect key="frame" x="511" y="184" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-tE-Yrw">
+                                <rect key="frame" x="16" y="170" width="39" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="iTX-YG-kKm"/>
+                                    <constraint firstAttribute="width" constant="39" id="cYg-ve-mY9"/>
                                 </constraints>
-                                <state key="normal" title="Add Fine">
+                                <state key="normal" image="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteJar:" destination="9qo-yC-LIB" eventType="touchUpInside" id="8Ku-IU-eHI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-Eh-VfT">
+                                <rect key="frame" x="16" y="72" width="568" height="31"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ixA-80-Ylz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oko-7G-5La">
+                                <rect key="frame" x="547" y="170" width="37" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Ui8-Fn-ezE"/>
+                                </constraints>
+                                <state key="normal" image="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -285,22 +297,30 @@ JWJ is not responsable for collecting and distributing fines.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MXy-Yg-3va" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leadingMargin" id="1AD-kh-GIF"/>
-                            <constraint firstAttribute="trailing" secondItem="sPg-JL-OyC" secondAttribute="trailing" id="3Zq-it-dPf"/>
-                            <constraint firstItem="TFH-hO-PYr" firstAttribute="top" secondItem="frM-kS-2uO" secondAttribute="bottom" constant="8" symbolic="YES" id="Nw8-dC-KLG"/>
-                            <constraint firstItem="Oko-7G-5La" firstAttribute="top" secondItem="frM-kS-2uO" secondAttribute="bottom" constant="120" id="Ovm-w5-hQG"/>
-                            <constraint firstItem="TFH-hO-PYr" firstAttribute="centerX" secondItem="MXy-Yg-3va" secondAttribute="centerX" id="VmL-jz-WNZ"/>
-                            <constraint firstItem="sPg-JL-OyC" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leading" id="ZF8-Af-RfB"/>
-                            <constraint firstItem="Oko-7G-5La" firstAttribute="trailing" secondItem="MXy-Yg-3va" secondAttribute="trailing" id="d7D-8Y-4er"/>
-                            <constraint firstItem="EPP-Dh-maW" firstAttribute="top" secondItem="MXy-Yg-3va" secondAttribute="bottom" constant="8" symbolic="YES" id="iQb-b7-YOx"/>
-                            <constraint firstItem="TFH-hO-PYr" firstAttribute="centerX" secondItem="sPg-JL-OyC" secondAttribute="centerX" id="jlm-Y3-VOx"/>
-                            <constraint firstItem="MXy-Yg-3va" firstAttribute="top" secondItem="TFH-hO-PYr" secondAttribute="bottom" constant="30" id="nPH-Kp-Fz3"/>
-                            <constraint firstItem="sPg-JL-OyC" firstAttribute="bottom" secondItem="frM-kS-2uO" secondAttribute="bottom" id="ndM-m0-EjV"/>
+                            <constraint firstAttribute="trailing" secondItem="sPg-JL-OyC" secondAttribute="trailing" id="1fc-nE-CBU"/>
+                            <constraint firstItem="sPg-JL-OyC" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leading" id="3b9-rn-TEu"/>
+                            <constraint firstItem="Oko-7G-5La" firstAttribute="top" secondItem="eAg-tE-Yrw" secondAttribute="top" id="Fmr-xl-sJK"/>
+                            <constraint firstItem="MXy-Yg-3va" firstAttribute="top" secondItem="eAg-tE-Yrw" secondAttribute="bottom" constant="8" symbolic="YES" id="HyT-SM-0Uu"/>
+                            <constraint firstItem="MXy-Yg-3va" firstAttribute="top" secondItem="TFH-hO-PYr" secondAttribute="bottom" constant="8" symbolic="YES" id="KbD-rY-Lag"/>
+                            <constraint firstItem="cbg-Eh-VfT" firstAttribute="top" secondItem="frM-kS-2uO" secondAttribute="bottom" constant="8" symbolic="YES" id="OSY-eA-vUk"/>
+                            <constraint firstItem="Oko-7G-5La" firstAttribute="leading" secondItem="TFH-hO-PYr" secondAttribute="trailing" constant="8" symbolic="YES" id="RLF-Xw-1eY"/>
+                            <constraint firstItem="eAg-tE-Yrw" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leadingMargin" id="UKO-Gt-SEq"/>
+                            <constraint firstItem="cbg-Eh-VfT" firstAttribute="leading" secondItem="eAg-tE-Yrw" secondAttribute="leading" id="Uwj-Ta-8FZ"/>
+                            <constraint firstItem="sPg-JL-OyC" firstAttribute="centerX" secondItem="cbg-Eh-VfT" secondAttribute="centerX" id="VCy-am-nbP"/>
+                            <constraint firstItem="MXy-Yg-3va" firstAttribute="leading" secondItem="eAg-tE-Yrw" secondAttribute="leading" id="Yo1-q6-vBh"/>
+                            <constraint firstItem="TFH-hO-PYr" firstAttribute="top" secondItem="cbg-Eh-VfT" secondAttribute="bottom" constant="13" id="fjv-0c-DPg"/>
+                            <constraint firstItem="EPP-Dh-maW" firstAttribute="top" secondItem="MXy-Yg-3va" secondAttribute="bottom" constant="8" symbolic="YES" id="frw-jb-DoB"/>
+                            <constraint firstItem="TFH-hO-PYr" firstAttribute="leading" secondItem="eAg-tE-Yrw" secondAttribute="trailing" constant="8" symbolic="YES" id="gFA-Hs-Tpi"/>
+                            <constraint firstItem="sPg-JL-OyC" firstAttribute="bottom" secondItem="frM-kS-2uO" secondAttribute="bottom" id="gmJ-tZ-YNv"/>
+                            <constraint firstItem="Oko-7G-5La" firstAttribute="trailing" secondItem="cbg-Eh-VfT" secondAttribute="trailing" id="pzs-c5-PQV"/>
+                            <constraint firstItem="eAg-tE-Yrw" firstAttribute="top" secondItem="cbg-Eh-VfT" secondAttribute="bottom" constant="67" id="qsq-bi-HRv"/>
+                            <constraint firstItem="MXy-Yg-3va" firstAttribute="trailing" secondItem="Oko-7G-5La" secondAttribute="trailing" id="tcn-hI-O9R"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="jarTitleLabel" destination="cbg-Eh-VfT" id="54c-8y-vYk"/>
                         <outlet property="tableView" destination="MXy-Yg-3va" id="IKm-nd-3nD"/>
                         <outlet property="totalLabel" destination="TFH-hO-PYr" id="RFQ-y7-EhX"/>
                     </connections>
@@ -361,7 +381,7 @@ JWJ is not responsable for collecting and distributing fines.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWr-kW-jl6">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWr-kW-jl6">
                                 <rect key="frame" x="0.0" y="28" width="600" height="388"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEv-Sn-HFf">
@@ -461,7 +481,7 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.020631906080000002" green="0.020631906080000002" blue="0.020631906080000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="DEv-Sn-HFf" firstAttribute="top" secondItem="EWr-kW-jl6" secondAttribute="topMargin" id="RtB-UM-sKa"/>
                                     <constraint firstItem="DEv-Sn-HFf" firstAttribute="trailing" secondItem="EWr-kW-jl6" secondAttribute="trailingMargin" id="oWQ-au-JtO"/>
@@ -751,7 +771,9 @@ JWJ is not responsable for collecting and distributing fines.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="32" height="32"/>
         <image name="AddJarIcon" width="39" height="60"/>
+        <image name="Delete" width="32" height="32"/>
         <image name="SettupUserPic" width="100" height="100"/>
         <image name="jar_main" width="484" height="1066"/>
         <image name="menu" width="25" height="25"/>
