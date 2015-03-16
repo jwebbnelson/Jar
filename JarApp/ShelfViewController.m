@@ -29,6 +29,7 @@
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
 
+<<<<<<< HEAD
 }
 
 - (void)deleteJarWithID:(NSIndexPath *)index {
@@ -54,6 +55,13 @@
         [indexSet addIndex:indexPath.row];
     }
 }
+=======
+  
+}
+
+
+
+>>>>>>> Developer/master
 - (void)newJarReload {
     [self.collectionView reloadData];
 }

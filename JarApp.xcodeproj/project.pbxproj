@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		231C7D961AB6686B00E873A0 /* AddingMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231C7D951AB6686B00E873A0 /* AddingMembersViewController.m */; };
-		231C7D981AB6687800E873A0 /* AddingMembersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 231C7D971AB6687800E873A0 /* AddingMembersTableViewCell.m */; };
 		232874631AAA626A00F48B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874621AAA626A00F48B90 /* main.m */; };
 		232874661AAA626A00F48B90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874651AAA626A00F48B90 /* AppDelegate.m */; };
-		2328746C1AAA626A00F48B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2328746A1AAA626A00F48B90 /* Main.storyboard */; };
 		2328746E1AAA626A00F48B90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2328746D1AAA626A00F48B90 /* Images.xcassets */; };
 		232874711AAA626A00F48B90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2328746F1AAA626A00F48B90 /* LaunchScreen.xib */; };
 		2328747D1AAA626A00F48B90 /* JarAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328747C1AAA626A00F48B90 /* JarAppTests.m */; };
@@ -26,9 +23,13 @@
 		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
 		83061A0B1AB4BE8D0008BE27 /* JarLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */; };
 		83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */; };
+		832910541AB6359F005D5208 /* CustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832910531AB6359F005D5208 /* CustomLoginViewController.m */; };
+		832910571AB6395E005D5208 /* CustomSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832910561AB6395E005D5208 /* CustomSignUpViewController.m */; };
+		8329105B1AB63F66005D5208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832910591AB63F66005D5208 /* Main.storyboard */; };
 		832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C3D1AAF9B5B002331C0 /* Jar.m */; };
 		832C6C431AAFD9A3002331C0 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */; };
 		832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */; };
+		8383FC051AB6BA010046223C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8383FC031AB6BA010046223C /* Main.storyboard */; };
 		83877FB51AAB9DB600B0CED7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB31AAB9DB600B0CED7 /* Bolts.framework */; };
 		83877FB81AAB9E1D00B0CED7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB71AAB9E1D00B0CED7 /* AudioToolbox.framework */; };
 		83877FBA1AAB9E2600B0CED7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83877FB91AAB9E2600B0CED7 /* CFNetwork.framework */; };
@@ -65,16 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		231C7D941AB6685300E873A0 /* AddingMembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingMembersViewController.h; sourceTree = "<group>"; };
-		231C7D951AB6686B00E873A0 /* AddingMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingMembersViewController.m; sourceTree = "<group>"; };
-		231C7D971AB6687800E873A0 /* AddingMembersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingMembersTableViewCell.m; sourceTree = "<group>"; };
-		231C7D991AB6688200E873A0 /* AddingMembersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingMembersTableViewCell.h; sourceTree = "<group>"; };
 		2328745D1AAA626900F48B90 /* JarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232874611AAA626A00F48B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232874621AAA626A00F48B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		232874641AAA626A00F48B90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		232874651AAA626A00F48B90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2328746B1AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2328746D1AAA626A00F48B90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		232874701AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		232874761AAA626A00F48B90 /* JarAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,12 +98,18 @@
 		83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarLoginViewController.m; sourceTree = "<group>"; };
 		83061A0C1AB4BF8A0008BE27 /* JarSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarSignUpViewController.h; sourceTree = "<group>"; };
 		83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarSignUpViewController.m; sourceTree = "<group>"; };
+		832910521AB6359F005D5208 /* CustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginViewController.h; sourceTree = "<group>"; };
+		832910531AB6359F005D5208 /* CustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginViewController.m; sourceTree = "<group>"; };
+		832910551AB6395E005D5208 /* CustomSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSignUpViewController.h; sourceTree = "<group>"; };
+		832910561AB6395E005D5208 /* CustomSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSignUpViewController.m; sourceTree = "<group>"; };
+		8329105A1AB63F66005D5208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		832C6C3C1AAF9B5A002331C0 /* Jar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jar.h; sourceTree = "<group>"; };
 		832C6C3D1AAF9B5B002331C0 /* Jar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jar.m; sourceTree = "<group>"; };
 		832C6C3F1AAFD9A3002331C0 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
 		832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
 		832C6C411AAFD9A3002331C0 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
 		832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		8383FC041AB6BA010046223C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83877FB31AAB9DB600B0CED7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		83877FB71AAB9E1D00B0CED7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		83877FB91AAB9E2600B0CED7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -200,10 +202,10 @@
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
 				832C6C3B1AAF9B37002331C0 /* New Group */,
 				8387801C1AAE00BE00B0CED7 /* Login */,
+				832910581AB63966005D5208 /* Custom Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
 				832C6C451AB09D47002331C0 /* Slider */,
-				2328746A1AAA626A00F48B90 /* Main.storyboard */,
 				232874601AAA626900F48B90 /* Supporting Files */,
 				83877FD01AABA73000B0CED7 /* Frameworks */,
 			);
@@ -250,10 +252,7 @@
 				2328748A1AAA6C8700F48B90 /* NewJarViewController.m */,
 				2328748F1AAA765300F48B90 /* ShelfCollectionViewCell.h */,
 				232874901AAA765300F48B90 /* ShelfCollectionViewCell.m */,
-				231C7D941AB6685300E873A0 /* AddingMembersViewController.h */,
-				231C7D951AB6686B00E873A0 /* AddingMembersViewController.m */,
-				231C7D991AB6688200E873A0 /* AddingMembersTableViewCell.h */,
-				231C7D971AB6687800E873A0 /* AddingMembersTableViewCell.m */,
+				832910591AB63F66005D5208 /* Main.storyboard */,
 			);
 			name = Shelf;
 			sourceTree = "<group>";
@@ -271,8 +270,20 @@
 				232874961AAA793D00F48B90 /* FineViewController.m */,
 				232874A31AAB874100F48B90 /* AddFineViewController.h */,
 				232874A41AAB874100F48B90 /* AddFineViewController.m */,
+				8383FC031AB6BA010046223C /* Main.storyboard */,
 			);
 			name = Jar;
+			sourceTree = "<group>";
+		};
+		832910581AB63966005D5208 /* Custom Login */ = {
+			isa = PBXGroup;
+			children = (
+				832910521AB6359F005D5208 /* CustomLoginViewController.h */,
+				832910531AB6359F005D5208 /* CustomLoginViewController.m */,
+				832910551AB6395E005D5208 /* CustomSignUpViewController.h */,
+				832910561AB6395E005D5208 /* CustomSignUpViewController.m */,
+			);
+			name = "Custom Login";
 			sourceTree = "<group>";
 		};
 		832C6C3B1AAF9B37002331C0 /* New Group */ = {
@@ -389,6 +400,7 @@
 				TargetAttributes = {
 					2328745C1AAA626900F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N9YM4MAB27;
 					};
 					232874751AAA626A00F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -420,9 +432,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2328746C1AAA626A00F48B90 /* Main.storyboard in Resources */,
+				8329105B1AB63F66005D5208 /* Main.storyboard in Resources */,
 				232874711AAA626A00F48B90 /* LaunchScreen.xib in Resources */,
 				2328746E1AAA626A00F48B90 /* Images.xcassets in Resources */,
+				8383FC051AB6BA010046223C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,12 +458,12 @@
 				232874881AAA6A1B00F48B90 /* ShelfViewController.m in Sources */,
 				232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */,
 				83061A0B1AB4BE8D0008BE27 /* JarLoginViewController.m in Sources */,
-				231C7D981AB6687800E873A0 /* AddingMembersTableViewCell.m in Sources */,
 				2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */,
 				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
-				231C7D961AB6686B00E873A0 /* AddingMembersViewController.m in Sources */,
+				832910571AB6395E005D5208 /* CustomSignUpViewController.m in Sources */,
+				832910541AB6359F005D5208 /* CustomLoginViewController.m in Sources */,
 				83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */,
 				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
@@ -483,20 +496,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2328746A1AAA626A00F48B90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2328746B1AAA626A00F48B90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2328746F1AAA626A00F48B90 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				232874701AAA626A00F48B90 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		832910591AB63F66005D5208 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8329105A1AB63F66005D5208 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8383FC031AB6BA010046223C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8383FC041AB6BA010046223C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -582,11 +603,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -596,11 +619,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

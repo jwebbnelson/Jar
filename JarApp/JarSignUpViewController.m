@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
     [self.signUpView setBackgroundColor:[UIColor lightGrayColor]];
     [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
     

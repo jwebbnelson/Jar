@@ -7,6 +7,7 @@
 //
 
 #import "JarLoginViewController.h"
+#import "ShelfViewController.h"
 
 @interface JarLoginViewController ()
 
@@ -16,12 +17,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    [self.logInView setBackgroundColor:[UIColor lightGrayColor]];
    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
 
     
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
     
+        if ([PFUser currentUser]) {
+    
+            [self.logInView setBackgroundColor:[UIColor greenColor]];
+            [self loggedIn];
+    
+        }else {
+            [self.logInView setBackgroundColor:[UIColor lightGrayColor]];
+        }
+
+}
+-(void)loggedIn {
+     ShelfViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"shelf"];
+    [self.navigationController pushViewController:viewController animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
