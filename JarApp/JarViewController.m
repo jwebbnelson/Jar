@@ -106,9 +106,13 @@
     [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
 
 //delete from Parse >> PUT CODE HERE
-      [[JarController sharedInstance]deleteJar:[Jar currentJar]];
-        NSLog(@"DELETE FROM PARSE THE JAR AND FINES");
-//After deleting the Jar and Fines, Push back to ShelfViewController:
+        if ([Jar currentJar]) {
+            [[JarController sharedInstance]deleteFines:[Jar currentJar]];
+            NSLog(@"DELETED FINES");
+        }
+        [[JarController sharedInstance]deleteJar:[Jar currentJar]];
+        NSLog(@"DELETED JAR");
+        [self.navigationController popToRootViewControllerAnimated:YES];
         
     }]];
     [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {

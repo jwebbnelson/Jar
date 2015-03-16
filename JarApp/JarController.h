@@ -14,10 +14,12 @@
 
 @property (nonatomic, strong, readonly) NSArray *jars;
 @property (nonatomic, readwrite) float fineTotal;
+@property (nonatomic, strong) PFQuery *queryFines;
 
 + (JarController *)sharedInstance;
 
 - (void)addJarWithTitle:(NSString *)title;
 - (void)deleteJar:(PFObject *)jarObject;
+- (void)deleteFines:(PFObject *)finesObject;
 
 @end

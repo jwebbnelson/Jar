@@ -28,7 +28,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
     
     self.query =[PFQuery queryWithClassName:@"Jar"];
+    
 
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
 }
 - (void)deletItemsFromDataSourceAtIndexPath:(NSArray *)itemPaths {
     

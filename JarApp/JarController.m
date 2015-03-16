@@ -33,8 +33,18 @@
     
 }
 
+- (void)deleteFines:(PFObject *)finesObject{
+
+    self.queryFines = [PFQuery queryWithClassName:@"Fine"];
+    [_queryFines whereKey:@"Jar" equalTo:finesObject];
+    [finesObject deleteInBackground];
+    
+}
+
+
 - (void)deleteJar:(PFObject *)jarObject {
 
+    
     PFObject *jar = [PFObject objectWithClassName:@"Jar"];
     jar = jarObject;
     [jarObject deleteInBackground];
