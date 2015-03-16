@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		232874631AAA626A00F48B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874621AAA626A00F48B90 /* main.m */; };
 		232874661AAA626A00F48B90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874651AAA626A00F48B90 /* AppDelegate.m */; };
-		2328746C1AAA626A00F48B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2328746A1AAA626A00F48B90 /* Main.storyboard */; };
 		2328746E1AAA626A00F48B90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2328746D1AAA626A00F48B90 /* Images.xcassets */; };
 		232874711AAA626A00F48B90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2328746F1AAA626A00F48B90 /* LaunchScreen.xib */; };
 		2328747D1AAA626A00F48B90 /* JarAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328747C1AAA626A00F48B90 /* JarAppTests.m */; };
@@ -24,6 +23,9 @@
 		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
 		83061A0B1AB4BE8D0008BE27 /* JarLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */; };
 		83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */; };
+		832910541AB6359F005D5208 /* CustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832910531AB6359F005D5208 /* CustomLoginViewController.m */; };
+		832910571AB6395E005D5208 /* CustomSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832910561AB6395E005D5208 /* CustomSignUpViewController.m */; };
+		8329105B1AB63F66005D5208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832910591AB63F66005D5208 /* Main.storyboard */; };
 		832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C3D1AAF9B5B002331C0 /* Jar.m */; };
 		832C6C431AAFD9A3002331C0 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C401AAFD9A3002331C0 /* ASValuePopUpView.m */; };
 		832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C6C421AAFD9A3002331C0 /* ASValueTrackingSlider.m */; };
@@ -68,7 +70,6 @@
 		232874621AAA626A00F48B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		232874641AAA626A00F48B90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		232874651AAA626A00F48B90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2328746B1AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2328746D1AAA626A00F48B90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		232874701AAA626A00F48B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		232874761AAA626A00F48B90 /* JarAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +97,11 @@
 		83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarLoginViewController.m; sourceTree = "<group>"; };
 		83061A0C1AB4BF8A0008BE27 /* JarSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JarSignUpViewController.h; sourceTree = "<group>"; };
 		83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarSignUpViewController.m; sourceTree = "<group>"; };
+		832910521AB6359F005D5208 /* CustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginViewController.h; sourceTree = "<group>"; };
+		832910531AB6359F005D5208 /* CustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginViewController.m; sourceTree = "<group>"; };
+		832910551AB6395E005D5208 /* CustomSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSignUpViewController.h; sourceTree = "<group>"; };
+		832910561AB6395E005D5208 /* CustomSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSignUpViewController.m; sourceTree = "<group>"; };
+		8329105A1AB63F66005D5208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		832C6C3C1AAF9B5A002331C0 /* Jar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jar.h; sourceTree = "<group>"; };
 		832C6C3D1AAF9B5B002331C0 /* Jar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jar.m; sourceTree = "<group>"; };
 		832C6C3F1AAFD9A3002331C0 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
@@ -197,7 +203,6 @@
 				2328749E1AAA7B3000F48B90 /* Shelf */,
 				2328749F1AAA7B3E00F48B90 /* Jar */,
 				832C6C451AB09D47002331C0 /* Slider */,
-				2328746A1AAA626A00F48B90 /* Main.storyboard */,
 				232874601AAA626900F48B90 /* Supporting Files */,
 				83877FD01AABA73000B0CED7 /* Frameworks */,
 			);
@@ -244,6 +249,7 @@
 				2328748A1AAA6C8700F48B90 /* NewJarViewController.m */,
 				2328748F1AAA765300F48B90 /* ShelfCollectionViewCell.h */,
 				232874901AAA765300F48B90 /* ShelfCollectionViewCell.m */,
+				832910591AB63F66005D5208 /* Main.storyboard */,
 			);
 			name = Shelf;
 			sourceTree = "<group>";
@@ -263,6 +269,17 @@
 				232874A41AAB874100F48B90 /* AddFineViewController.m */,
 			);
 			name = Jar;
+			sourceTree = "<group>";
+		};
+		832910581AB63966005D5208 /* Custom Login */ = {
+			isa = PBXGroup;
+			children = (
+				832910521AB6359F005D5208 /* CustomLoginViewController.h */,
+				832910531AB6359F005D5208 /* CustomLoginViewController.m */,
+				832910551AB6395E005D5208 /* CustomSignUpViewController.h */,
+				832910561AB6395E005D5208 /* CustomSignUpViewController.m */,
+			);
+			name = "Custom Login";
 			sourceTree = "<group>";
 		};
 		832C6C3B1AAF9B37002331C0 /* New Group */ = {
@@ -326,6 +343,7 @@
 				83061A0A1AB4BE8D0008BE27 /* JarLoginViewController.m */,
 				83061A0C1AB4BF8A0008BE27 /* JarSignUpViewController.h */,
 				83061A0D1AB4BF8A0008BE27 /* JarSignUpViewController.m */,
+				832910581AB63966005D5208 /* Custom Login */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -379,6 +397,7 @@
 				TargetAttributes = {
 					2328745C1AAA626900F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N9YM4MAB27;
 					};
 					232874751AAA626A00F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -410,7 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2328746C1AAA626A00F48B90 /* Main.storyboard in Resources */,
+				8329105B1AB63F66005D5208 /* Main.storyboard in Resources */,
 				232874711AAA626A00F48B90 /* LaunchScreen.xib in Resources */,
 				2328746E1AAA626A00F48B90 /* Images.xcassets in Resources */,
 			);
@@ -439,6 +458,8 @@
 				832C6C3E1AAF9B5B002331C0 /* Jar.m in Sources */,
 				832C6C441AAFD9A3002331C0 /* ASValueTrackingSlider.m in Sources */,
 				232874911AAA765300F48B90 /* ShelfCollectionViewCell.m in Sources */,
+				832910571AB6395E005D5208 /* CustomSignUpViewController.m in Sources */,
+				832910541AB6359F005D5208 /* CustomLoginViewController.m in Sources */,
 				83061A0E1AB4BF8A0008BE27 /* JarSignUpViewController.m in Sources */,
 				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
@@ -471,20 +492,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2328746A1AAA626A00F48B90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2328746B1AAA626A00F48B90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2328746F1AAA626A00F48B90 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				232874701AAA626A00F48B90 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		832910591AB63F66005D5208 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8329105A1AB63F66005D5208 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -570,11 +591,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -584,11 +607,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,50 +1,34 @@
 //
-//  JarLoginViewController.m
+//  CustomLoginViewController.m
 //  JarApp
 //
-//  Created by Jordan Nelson on 3/14/15.
+//  Created by Jordan Nelson on 3/15/15.
 //  Copyright (c) 2015 Jake Herrmann. All rights reserved.
 //
 
-#import "JarLoginViewController.h"
-#import "ShelfViewController.h"
+#import "CustomLoginViewController.h"
 
-@interface JarLoginViewController ()
+@interface CustomLoginViewController ()
 
 @end
 
-@implementation JarLoginViewController
+@implementation CustomLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
-
-    
-}
-
-
--(void)viewDidAppear:(BOOL)animated {
-    
-        if ([PFUser currentUser]) {
-    
-            [self.logInView setBackgroundColor:[UIColor greenColor]];
-            [self loggedIn];
-    
-        }else {
-            [self.logInView setBackgroundColor:[UIColor lightGrayColor]];
-        }
-
-}
--(void)loggedIn {
-     ShelfViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"shelf"];
-    [self.navigationController pushViewController:viewController animated:YES];
-
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)logIn:(id)sender {
+    
+
+    
+}
+
 
 #pragma mark - PFLogInViewControllerDelegate
 
@@ -74,7 +58,6 @@
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     NSLog(@"User dismissed the logInViewController");
 }
-
 
 
 /*

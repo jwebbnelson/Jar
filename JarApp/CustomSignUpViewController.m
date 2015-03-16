@@ -1,34 +1,41 @@
 //
-//  JarSignUpViewController.m
+//  CustomSignUpViewController.m
 //  JarApp
 //
-//  Created by Jordan Nelson on 3/14/15.
+//  Created by Jordan Nelson on 3/15/15.
 //  Copyright (c) 2015 Jake Herrmann. All rights reserved.
 //
 
-#import "JarSignUpViewController.h"
+#import "CustomSignUpViewController.h"
 
-@interface JarSignUpViewController ()
+@interface CustomSignUpViewController ()
 
 @end
 
-@implementation JarSignUpViewController
+@implementation CustomSignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    
-    [self.signUpView setBackgroundColor:[UIColor lightGrayColor]];
-    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"thinJarLogo"]]];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)signUp:(id)sender {
+    
+    PFUser *user = [PFUser user];
+    
+    user.username = self.usernameTextField.text;
+    user.email = self.emailTextField.text;
+    user.password = self.passwordTextField.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self performSegueWithIdentifier:@"signedUp" sender:self];
+    }];
+}
+
 
 #pragma mark - PFSignUpViewControllerDelegate
 
@@ -67,6 +74,7 @@
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
 }
+
 /*
 #pragma mark - Navigation
 
