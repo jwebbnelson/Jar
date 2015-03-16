@@ -8,6 +8,10 @@
 
 #import "AddingMembersTableViewCell.h"
 
+@interface AddingMembersTableViewCell ()
+
+@end
+
 @implementation AddingMembersTableViewCell
 
 - (void)awakeFromNib {

@@ -7,13 +7,14 @@
 //
 
 #import "AddingMembersViewController.h"
+#import "AddingMembersTableViewCell.h"
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
 @interface AddingMembersViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) NSArray *users;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -42,9 +43,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"userCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    AddingMembersTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFUser *user = self.users[indexPath.row];
-    cell.textLabel.text = user.username;
+    cell.usernameLabel.text = user.username;
+   // cell.textLabel.text = user.username;
     
     return cell;
 }

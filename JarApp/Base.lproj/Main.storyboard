@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lD3-Mp-phE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13r-SL-Tjf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -421,6 +421,15 @@
                                             <action selector="createJar:" destination="zn9-sK-fyv" eventType="touchUpInside" id="NXk-W1-fjr"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-u6-Fx5">
+                                        <rect key="frame" x="172" y="106" width="97" height="30"/>
+                                        <state key="normal" title="Add Members">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="d6a-uA-7O2" kind="show" id="bUg-3h-Tau"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66777546246525343" green="0.81054506971040574" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -473,6 +482,71 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="1980" y="-45"/>
+        </scene>
+        <!--Adding Members View Controller-->
+        <scene sceneID="fUv-c0-18j">
+            <objects>
+                <viewController id="d6a-uA-7O2" customClass="AddingMembersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zTA-hU-UAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="TLK-gh-dRV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rI5-Ni-e0r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-ks-gxq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" id="WMc-Uw-yYN" customClass="AddingMembersTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMc-Uw-yYN" id="bAf-r3-PlJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x28-x1-j8q">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs4-B6-zw1">
+                                                    <rect key="frame" x="546" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="Add">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bs4-B6-zw1" firstAttribute="leading" secondItem="x28-x1-j8q" secondAttribute="trailing" constant="496" id="VBH-p7-wNE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bs4-B6-zw1" secondAttribute="trailing" constant="16" id="duO-FE-DSG"/>
+                                                <constraint firstItem="x28-x1-j8q" firstAttribute="leading" secondItem="bAf-r3-PlJ" secondAttribute="leadingMargin" id="xd7-DL-oOK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="x28-x1-j8q" id="cLv-QL-66X"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d6a-uA-7O2" id="NMB-ng-5ra"/>
+                                    <outlet property="delegate" destination="d6a-uA-7O2" id="UzN-Zk-bxc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dv0-ks-gxq" firstAttribute="leading" secondItem="rI5-Ni-e0r" secondAttribute="leadingMargin" constant="-16" id="cfx-H4-hAA"/>
+                            <constraint firstAttribute="centerY" secondItem="dv0-ks-gxq" secondAttribute="centerY" id="o3x-Ja-0Ji"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dv0-ks-gxq" id="Q8g-54-89B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xea-ya-MgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704" y="-101"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GrK-pd-DID">
