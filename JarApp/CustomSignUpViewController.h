@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 
-@interface CustomSignUpViewController : UIViewController <PFSignUpViewControllerDelegate>
+@interface CustomSignUpViewController : UIViewController 
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;

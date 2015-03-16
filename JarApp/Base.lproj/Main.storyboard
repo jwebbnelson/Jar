@@ -39,6 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logIn:" destination="d2Q-V2-wqC" eventType="touchUpInside" id="1Vx-6m-uNV"/>
+                                    <segue destination="13r-SL-Tjf" kind="modal" identifier="loggedIn" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="DGw-d8-6mV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dont have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYq-53-C8Q">
@@ -694,4 +695,7 @@
         <image name="Plus-50-2" width="50" height="50"/>
         <image name="thinJarLogo" width="182" height="124"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DGw-d8-6mV"/>
+    </inferredMetricsTieBreakers>
 </document>
