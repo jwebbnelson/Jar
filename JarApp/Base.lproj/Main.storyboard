@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13r-SL-Tjf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13r-SL-Tjf">
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
->>>>>>> d11e78a4eb698790aae0ec0db4a53d6a49c880d6
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--ShelfViewController-->
@@ -594,13 +587,11 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                             <constraint firstItem="agL-Zz-weW" firstAttribute="centerX" secondItem="Qch-Jh-O3F" secondAttribute="centerX" id="vAt-Gp-fRc"/>
                                             <constraint firstItem="xSC-hp-p2Q" firstAttribute="top" secondItem="0zF-6Z-cOv" secondAttribute="top" id="ypd-xA-Afm"/>
                                         </constraints>
-<<<<<<< HEAD
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="zn9-sK-fyv" id="hB6-BR-59N"/>
                                         </connections>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-y4-kkQ">
                                         <rect key="frame" x="227" y="0.0" width="75" height="30"/>
                                         <state key="normal" title="Create Jar!">
@@ -619,13 +610,11 @@ JWJ is not responsable for collecting and distributing fines.</string>
                                             <segue destination="jl3-UP-5ds" kind="show" id="bCn-Lm-26d"/>
                                         </connections>
                                     </button>
-=======
                                     </view>
->>>>>>> d11e78a4eb698790aae0ec0db4a53d6a49c880d6
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Qch-Jh-O3F" firstAttribute="top" secondItem="ubr-ud-nah" secondAttribute="topMargin" id="DJt-qm-GiX"/>
+                                  <constraint firstItem="Qch-Jh-O3F" firstAttribute="top" secondItem="ubr-ud-nah" secondAttribute="topMargin" id="DJt-qm-GiX"/>
                                     <constraint firstItem="Qch-Jh-O3F" firstAttribute="leading" secondItem="ubr-ud-nah" secondAttribute="leading" id="UZ0-QX-2D3"/>
                                     <constraint firstItem="Qch-Jh-O3F" firstAttribute="bottom" secondItem="ubr-ud-nah" secondAttribute="bottomMargin" id="aSS-ob-uYK"/>
                                     <constraint firstAttribute="trailing" secondItem="Qch-Jh-O3F" secondAttribute="trailing" id="iKX-S5-7GX"/>
@@ -667,7 +656,6 @@ JWJ is not responsable for collecting and distributing fines.</string>
             </objects>
             <point key="canvasLocation" x="1718" y="-24"/>
         </scene>
-<<<<<<< HEAD
         <!--Adding Members View Controller-->
         <scene sceneID="klh-um-Ftu">
             <objects>
@@ -709,9 +697,7 @@ JWJ is not responsable for collecting and distributing fines.</string>
             <point key="canvasLocation" x="2718" y="-46"/>
         </scene>
         <!--View Controller-->
-=======
         <!--Default Settings View Controller-->
->>>>>>> d11e78a4eb698790aae0ec0db4a53d6a49c880d6
         <scene sceneID="GrK-pd-DID">
             <objects>
                 <viewController id="HXb-1X-gfZ" customClass="DefaultSettingsViewController" sceneMemberID="viewController">
