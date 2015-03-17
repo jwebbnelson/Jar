@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13r-SL-Tjf">
-=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d2Q-V2-wqC">
->>>>>>> Developer/master
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -529,15 +525,7 @@
                                         </state>
                                         <connections>
                                             <action selector="createJar:" destination="zn9-sK-fyv" eventType="touchUpInside" id="NXk-W1-fjr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-u6-Fx5">
-                                        <rect key="frame" x="172" y="106" width="97" height="30"/>
-                                        <state key="normal" title="Add Members">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="d6a-uA-7O2" kind="show" id="bUg-3h-Tau"/>
+                                            <segue destination="d6a-uA-7O2" kind="show" id="q0K-Ae-Lxa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -606,7 +594,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-ks-gxq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="71" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" id="WMc-Uw-yYN" customClass="AddingMembersTableViewCell">
@@ -615,13 +603,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x28-x1-j8q">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="12" width="163" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs4-B6-zw1">
-                                                    <rect key="frame" x="546" y="7" width="30" height="30"/>
+                                                    <rect key="frame" x="546" y="8" width="30" height="30"/>
                                                     <state key="normal" title="Add">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -643,20 +631,36 @@
                                     <outlet property="delegate" destination="d6a-uA-7O2" id="UzN-Zk-bxc"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYS-ws-H6g">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QDG-xA-9l3">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lD4-Uv-omT">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="44"/>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="QDG-xA-9l3" secondAttribute="trailing" constant="-16" id="bqc-3f-o7v"/>
                             <constraint firstItem="dv0-ks-gxq" firstAttribute="leading" secondItem="rI5-Ni-e0r" secondAttribute="leadingMargin" constant="-16" id="cfx-H4-hAA"/>
+                            <constraint firstItem="QDG-xA-9l3" firstAttribute="top" secondItem="zTA-hU-UAg" secondAttribute="bottom" constant="8" id="iJN-lx-8Xd"/>
+                            <constraint firstItem="dv0-ks-gxq" firstAttribute="top" secondItem="QDG-xA-9l3" secondAttribute="bottom" constant="-1" id="mpl-C0-j9I"/>
                             <constraint firstAttribute="centerY" secondItem="dv0-ks-gxq" secondAttribute="centerY" id="o3x-Ja-0Ji"/>
+                            <constraint firstItem="QDG-xA-9l3" firstAttribute="leading" secondItem="rI5-Ni-e0r" secondAttribute="leadingMargin" constant="-16" id="uPL-Ok-ooW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="QDG-xA-9l3" id="Fcz-5i-OrK"/>
                         <outlet property="tableView" destination="dv0-ks-gxq" id="Q8g-54-89B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xea-ya-MgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="-101"/>
+            <point key="canvasLocation" x="2719" y="-40"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GrK-pd-DID">
