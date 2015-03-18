@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+
+
 
 @interface JarController : NSObject
 
+@property (nonatomic, strong)PFQuery *queryFines;
 @property (nonatomic, strong, readonly) NSArray *jars;
 @property (nonatomic, readwrite) float fineTotal;
 
 + (JarController *)sharedInstance;
 
+- (void)deleteFines:(PFObject *)finesObject;
 -(void)addJarWithTitle:(NSString *)title;
 -(void)addMembersToJar:(NSArray *)array;
-
+-(void)deleteJar:(PFObject *)jarObject;
 
 @end

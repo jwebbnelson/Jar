@@ -31,6 +31,10 @@
 
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
+}
+
 - (void)deleteJarWithID:(NSIndexPath *)index {
     
     //Notification from bottom asking if "you're sure to delete the Jar?"

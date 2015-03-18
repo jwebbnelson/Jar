@@ -41,6 +41,7 @@
     NSArray *objects = [self.query findObjects];
     self.indexObject = [objects objectAtIndex:indexPath.row];
     cell.titleLabel.text = self.indexObject[@"Title"];
+    cell.cashLabel.text = self.indexObject[@"Total"];
     
     return cell;
 

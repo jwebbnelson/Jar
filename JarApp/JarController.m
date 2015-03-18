@@ -8,7 +8,6 @@
 
 #import "JarController.h"
 #import "Jar.h"
-#import <Parse/Parse.h>
 
 @implementation JarController
 
@@ -47,4 +46,18 @@
     }
     
 }
+- (void)deleteJar:(PFObject *)jarObject {
+        PFObject *jar = [PFObject objectWithClassName:@"Jar"];
+        jar = jarObject;
+        [jarObject deleteInBackground];
+        
+    }
+
+- (void)deleteFines:(PFObject *)finesObject{
+    self.queryFines = [PFQuery queryWithClassName:@"Fine"];
+    [_queryFines whereKey:@"Jar" equalTo:finesObject];
+    [finesObject deleteInBackground];
+    
+}
+
 @end

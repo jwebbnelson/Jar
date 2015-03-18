@@ -9,6 +9,7 @@
 #import "JarViewController.h"
 #import "AddFineViewController.h"
 #import "FineController.h"
+#import "JarController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
@@ -27,11 +28,32 @@
     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
     self.totalLabel.text = self.label;
-    
-  
-    NSLog(@"%@",[Jar currentJar][@"Members"]);
+    [[Jar currentJar] setObject:self.totalLabel.text forKey:@"Total"];
 
 }
+- (IBAction)deleteJar:(id)sender {
+    //Notification from bottom asking if "you're sure to delete the Jar?"
+    UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"DELETE JAR" message:@"Are you sure you want to delete this JAR and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        
+        //delete from Parse >> PUT CODE HERE
+        if ([Jar currentJar]) {
+            [[JarController sharedInstance]deleteFines:[Jar currentJar]];
+            NSLog(@"DELETED FINES");
+        }
+        [[JarController sharedInstance]deleteJar:[Jar currentJar]];
+        NSLog(@"DELETED JAR");
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }]];
+    [deleteController addAction:[UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        return; //Cancel the action
+    }]];
+    
+    [self presentViewController:deleteController animated:YES completion:nil];
+    
+}
+
 
 
 
