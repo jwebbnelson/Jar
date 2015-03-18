@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d2Q-V2-wqC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -319,7 +317,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoR-F3-GjY">
                                 <rect key="frame" x="0.0" y="238" width="25" height="25"/>
-                                <state key="normal" title="Button" image="Plus-50-2">
+                                <state key="normal" title="Button" image="plus">
                                     <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
@@ -362,17 +360,6 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEv-Sn-HFf">
                                 <rect key="frame" x="8" y="175" width="584" height="250"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmC-as-Xnr">
-                                        <rect key="frame" x="56" y="55" width="237" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="237" id="f6D-H9-Wj1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="kQP-Lw-p6T" id="Tp8-eQ-h2S"/>
-                                        </connections>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Perp:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-PH-bZc">
                                         <rect key="frame" x="8" y="58" width="81" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -430,23 +417,30 @@
                                             <action selector="submitFine:" destination="kQP-Lw-p6T" eventType="touchUpInside" id="sK3-9H-kpC"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-au-lE3">
+                                        <rect key="frame" x="66" y="54" width="65" height="30"/>
+                                        <state key="normal" title="Add Perp">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="zuN-1g-R3f" kind="show" id="kjl-bN-3WD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77212561009486147" green="0.62689327581492238" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="w6R-5x-svB" firstAttribute="top" secondItem="0n7-PH-bZc" secondAttribute="bottom" constant="21" id="2Yb-RC-YUm"/>
                                     <constraint firstItem="w6R-5x-svB" firstAttribute="leading" secondItem="eRb-9S-vX9" secondAttribute="trailing" constant="8" id="4Cn-wu-Pe2"/>
-                                    <constraint firstItem="qmC-as-Xnr" firstAttribute="leading" secondItem="0n7-PH-bZc" secondAttribute="trailing" constant="-33" id="8nv-Op-5Hk"/>
                                     <constraint firstAttribute="trailing" secondItem="cr4-r3-JKt" secondAttribute="trailing" constant="260" id="CLD-kP-sNJ"/>
                                     <constraint firstAttribute="trailing" secondItem="AD5-BL-S3O" secondAttribute="trailing" constant="34" id="IPN-Z9-Awc"/>
-                                    <constraint firstItem="w6R-5x-svB" firstAttribute="top" secondItem="qmC-as-Xnr" secondAttribute="bottom" constant="15" id="Ng6-wh-zO4"/>
                                     <constraint firstItem="eLe-IG-gGe" firstAttribute="leading" secondItem="DEv-Sn-HFf" secondAttribute="leading" constant="8" id="SQa-u4-cyL"/>
                                     <constraint firstItem="eRb-9S-vX9" firstAttribute="top" secondItem="0n7-PH-bZc" secondAttribute="bottom" constant="25" id="SSb-H3-onH"/>
                                     <constraint firstItem="AD5-BL-S3O" firstAttribute="leading" secondItem="eLe-IG-gGe" secondAttribute="trailing" constant="8" id="XOC-8T-EEI"/>
                                     <constraint firstItem="cr4-r3-JKt" firstAttribute="leading" secondItem="DEv-Sn-HFf" secondAttribute="leading" constant="260" id="a2a-ef-XeV"/>
                                     <constraint firstItem="eLe-IG-gGe" firstAttribute="top" secondItem="eRb-9S-vX9" secondAttribute="bottom" constant="43" id="b9q-pA-iBd"/>
+                                    <constraint firstItem="jfo-au-lE3" firstAttribute="leading" secondItem="0n7-PH-bZc" secondAttribute="trailing" constant="-23" id="nDs-FF-acz"/>
                                     <constraint firstItem="0n7-PH-bZc" firstAttribute="top" secondItem="d6f-TE-bdh" secondAttribute="bottom" constant="26" id="qHF-jF-BdU"/>
                                     <constraint firstItem="0n7-PH-bZc" firstAttribute="leading" secondItem="d6f-TE-bdh" secondAttribute="leading" id="r4i-jd-KC1"/>
-                                    <constraint firstItem="qmC-as-Xnr" firstAttribute="baseline" secondItem="0n7-PH-bZc" secondAttribute="firstBaseline" id="rO1-GA-knd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -466,12 +460,47 @@
                         <outlet property="baseView" destination="EWr-kW-jl6" id="Tfk-GZ-Wsf"/>
                         <outlet property="descriptionTextField" destination="w6R-5x-svB" id="5Zm-Bi-JMf"/>
                         <outlet property="fineSlider" destination="AD5-BL-S3O" id="3kx-rB-S9a"/>
-                        <outlet property="perpTextField" destination="qmC-as-Xnr" id="vhw-ys-h6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQu-SS-5bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2728" y="1345"/>
+        </scene>
+        <!--Add Perp View Controller-->
+        <scene sceneID="NS4-YQ-GQd">
+            <objects>
+                <viewController id="zuN-1g-R3f" customClass="AddPerpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zQX-va-uRn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yyj-NH-Ytj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dec-zT-JKW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-Ng-CPQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="perpCell" id="gPs-13-YNH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gPs-13-YNH" id="Lhv-rz-Abx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zuN-1g-R3f" id="Tc5-iq-jpW"/>
+                                    <outlet property="delegate" destination="zuN-1g-R3f" id="kvb-bI-9jD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keh-gU-P2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3430" y="1345"/>
         </scene>
         <!--New Jar View Controller-->
         <scene sceneID="eRs-GM-TyM">
@@ -656,6 +685,7 @@
                     <connections>
                         <outlet property="searchBar" destination="QDG-xA-9l3" id="Fcz-5i-OrK"/>
                         <outlet property="tableView" destination="dv0-ks-gxq" id="Q8g-54-89B"/>
+                        <segue destination="nd8-ul-n2J" kind="show" identifier="addMembers" id="Pz0-yU-Qim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xea-ya-MgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -774,10 +804,11 @@
     <resources>
         <image name="AddJarIcon" width="39" height="60"/>
         <image name="Close-50" width="25" height="25"/>
-        <image name="Plus-50-2" width="50" height="50"/>
+        <image name="plus" width="50" height="50"/>
         <image name="thinJarLogo" width="182" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Pz0-yU-Qim"/>
         <segue reference="DGw-d8-6mV"/>
     </inferredMetricsTieBreakers>
 </document>

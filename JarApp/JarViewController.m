@@ -27,6 +27,9 @@
     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
     
     self.totalLabel.text = self.label;
+    
+  
+    NSLog(@"%@",[Jar currentJar][@"Members"]);
 
 }
 

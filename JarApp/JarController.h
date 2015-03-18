@@ -16,5 +16,7 @@
 + (JarController *)sharedInstance;
 
 -(void)addJarWithTitle:(NSString *)title;
+-(void)addMembersToJar:(NSArray *)array;
+
 
 @end

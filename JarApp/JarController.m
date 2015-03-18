@@ -23,14 +23,28 @@
 
 -(NSArray *)jars {
     PFQuery *query = [Jar query];
+
+    [query whereKey:@"ACL" equalTo:[PFUser currentUser]];
+
     return [query findObjects];
 }
 
 -(void)addJarWithTitle:(NSString *)title {
-    PFObject *jar = [PFObject objectWithClassName:@"Jar"];
+    Jar *jar = [Jar objectWithClassName:@"Jar"];
     jar[@"Title"] = title;
-    
+    [Jar setCurrentJar:jar];
     [jar saveInBackground];
+    
+}
+
+-(void)addMembersToJar:(NSArray *)array{
+    for (PFUser *user in array) {
+        
+        PFACL *ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+        [ACL setWriteAccess:YES forUserId:user.objectId];
+        
+        [Jar currentJar].ACL = ACL;
+    }
     
 }
 @end

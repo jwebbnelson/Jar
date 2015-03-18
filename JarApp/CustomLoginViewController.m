@@ -48,9 +48,6 @@
     
 }
 
-//-(void) checkPasswordsMatch {
-//    if(!self.passwordTextField.text isEqualToString:[PFUser]
-//}
 
 
 

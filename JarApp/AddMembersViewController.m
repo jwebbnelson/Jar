@@ -11,6 +11,8 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 #import "MemberController.h"
+#import "Jar.h"
+#import "JarController.h"
 
 @interface AddingMembersViewController () <UISearchBarDelegate, UITableViewDelegate>
 
@@ -30,7 +32,7 @@
     [super viewDidLoad];
 
 
-    UIBarButtonItem *addMembers = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus"] style:UIBarButtonItemStylePlain target:self action:@selector(addMembers)];
+    UIBarButtonItem *addMembers = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"addMembers"] style:UIBarButtonItemStylePlain target:self action:@selector(addMembers)];
     [self.navigationItem setRightBarButtonItem:addMembers];
     
     self.tableView.allowsMultipleSelection = YES;
@@ -51,17 +53,28 @@
     
     
 }
+
 -(void)addMembers{
     NSArray *selectedCells = [self.tableView indexPathsForSelectedRows];
     NSMutableArray *usersArray = [NSMutableArray new];
+    NSMutableArray *usernameArray = [NSMutableArray new];
     PFUser *user;
+    NSString *username;
     for (NSIndexPath *indexPath in selectedCells) {
         user = [self.users objectAtIndex:indexPath.row];
+        username = user.username;
         [usersArray addObject:user];
+        [usernameArray addObject:username];
     }
-    NSLog(@"USERS !!!!!!    !!!!      %@", usersArray);
+    [Jar currentJar][@"Members"] = usersArray;
+    [Jar currentJar][@"MemberUsernames"] = usernameArray;
+    [[Jar currentJar]saveInBackground];
+   // [[JarController sharedInstance] addMembersToJar:usersArray];
+    [self performSegueWithIdentifier:@"addMembers" sender:nil];
+    
     
 }
+
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if(searchText.length == 0)
     {

@@ -21,6 +21,7 @@
 		2328749A1AAA79A500F48B90 /* JarTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874991AAA79A500F48B90 /* JarTableViewDataSource.m */; };
 		2328749D1AAA7A6300F48B90 /* JarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */; };
 		232874A51AAB874100F48B90 /* AddFineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 232874A41AAB874100F48B90 /* AddFineViewController.m */; };
+		236C5B561AB8E1C300296796 /* AddPerpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C5B551AB8E1C300296796 /* AddPerpViewController.m */; };
 		23D3FAD31AB778840005034F /* AddMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D3FAD21AB778840005034F /* AddMembersViewController.m */; };
 		23D3FAD61AB779400005034F /* AddingMembersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D3FAD51AB779400005034F /* AddingMembersTableViewCell.m */; };
 		23D3FAD91AB77A7D0005034F /* MemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D3FAD81AB77A7D0005034F /* MemberController.m */; };
@@ -95,6 +96,8 @@
 		2328749C1AAA7A6300F48B90 /* JarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JarTableViewCell.m; sourceTree = "<group>"; };
 		232874A31AAB874100F48B90 /* AddFineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFineViewController.h; sourceTree = "<group>"; };
 		232874A41AAB874100F48B90 /* AddFineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFineViewController.m; sourceTree = "<group>"; };
+		236C5B541AB8E1C300296796 /* AddPerpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPerpViewController.h; sourceTree = "<group>"; };
+		236C5B551AB8E1C300296796 /* AddPerpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPerpViewController.m; sourceTree = "<group>"; };
 		23D3FAD11AB778840005034F /* AddMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMembersViewController.h; sourceTree = "<group>"; };
 		23D3FAD21AB778840005034F /* AddMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMembersViewController.m; sourceTree = "<group>"; };
 		23D3FAD41AB7792F0005034F /* AddingMembersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingMembersTableViewCell.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				232874961AAA793D00F48B90 /* FineViewController.m */,
 				232874A31AAB874100F48B90 /* AddFineViewController.h */,
 				232874A41AAB874100F48B90 /* AddFineViewController.m */,
+				236C5B541AB8E1C300296796 /* AddPerpViewController.h */,
+				236C5B551AB8E1C300296796 /* AddPerpViewController.m */,
 				8383FC031AB6BA010046223C /* Main.storyboard */,
 			);
 			name = Jar;
@@ -464,6 +469,7 @@
 				83CDF5771AB2381C000A90E3 /* FineController.m in Sources */,
 				2328748E1AAA6DD300F48B90 /* ShelfCollectionViewDataSource.m in Sources */,
 				23D3FAD31AB778840005034F /* AddMembersViewController.m in Sources */,
+				236C5B561AB8E1C300296796 /* AddPerpViewController.m in Sources */,
 				232874941AAA790C00F48B90 /* JarViewController.m in Sources */,
 				23D3FAD91AB77A7D0005034F /* MemberController.m in Sources */,
 				838780351AAF40BE00B0CED7 /* Fine.m in Sources */,
