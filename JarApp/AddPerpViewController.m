@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +32,11 @@
     return [Jar currentJar][@"MemberUsernames"];
      
 }
+- (IBAction)back:(id)sender {
 
+    [self.navigationController popViewControllerAnimated:YES];
+}
+                                   
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"perpCell"];
     cell.textLabel.text = [Jar currentJar][@"MemberUsernames"][indexPath.row];
