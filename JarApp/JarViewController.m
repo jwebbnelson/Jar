@@ -33,6 +33,8 @@
 
 }
 
+
+
 - (void)newFineReload {
     
      self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];

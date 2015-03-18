@@ -8,6 +8,8 @@
 
 #import "Fine.h"
 
+static Fine * currentFine;
+
 @implementation Fine
 
 //@dynamic name;
@@ -15,5 +17,13 @@
  + (NSString *)parseClassName {
       return @"Fine";
   }
+
++ (Fine *)currentFine {
+    return currentFine;
+}
+
++ (void)setCurrentFine:(Fine *)fine {
+    currentFine = fine;
+}
 
 @end

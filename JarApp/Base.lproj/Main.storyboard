@@ -497,6 +497,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="kQP-Lw-p6T" kind="show" identifier="addPerp" id="Xnv-if-Bdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keh-gU-P2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

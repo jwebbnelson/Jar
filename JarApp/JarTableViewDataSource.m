@@ -39,7 +39,7 @@
     PFObject *object = [objects objectAtIndex:indexPath.row];
     
     //TableViewCell text with Fee, Perp and Description.
-    cell.textLabel.text = [NSString stringWithFormat:@"$%@ - %@",object[@"Fee"],object[@"Perp"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"$%@ - %@", object[@"Fee"], object[@"Perp"]];
     cell.detailTextLabel.text = object[@"Description"];
     
     return cell;

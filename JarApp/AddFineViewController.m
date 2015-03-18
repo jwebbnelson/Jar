@@ -22,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    Fine *fine = [Fine objectWithClassName:@"Fine"];
+    [Fine setCurrentFine:fine];
 
     self.stepperValue = [NSNumber numberWithInt:1];
    
@@ -48,7 +51,7 @@
 
 - (IBAction)submitFine:(id)sender {
 
-    [[FineController sharedInstance] addFineWith:self.perpTextField.text description:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
+    [[FineController sharedInstance] addFineWithDescription:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
 
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
     

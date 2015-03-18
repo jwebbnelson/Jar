@@ -13,4 +13,9 @@
 // @property (nonatomic,strong) NSString *name;
 +(NSString *)parseClassName;
 
+
++(Fine *)currentFine;
+
++ (void)setCurrentFine:(Fine *)fine;
+
 @end

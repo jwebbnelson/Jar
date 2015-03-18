@@ -9,8 +9,9 @@
 #import "AddPerpViewController.h"
 #import "Jar.h"
 #import "JarController.h"
+#import "Fine.h"
 
-@interface AddPerpViewController ()
+@interface AddPerpViewController () <UITableViewDelegate>
 
 @end
 
@@ -42,6 +43,12 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self memberQuery].count;
     
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[Fine currentFine] setObject:[self memberQuery][indexPath.row]forKey:@"Perp"];
+    [[Fine currentFine] saveInBackground];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

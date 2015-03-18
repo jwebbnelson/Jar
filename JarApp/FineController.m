@@ -8,6 +8,7 @@
 
 #import "FineController.h"
 #import "Jar.h"
+#import "Fine.h"
 
 @interface FineController ()
 
@@ -26,17 +27,17 @@
     return sharedInstance;
 }
 
--(void)addFineWith:(NSString *)perp description:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee {
+-(void)addFineWithDescription:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee {
     
-    PFObject *fine = [PFObject objectWithClassName:@"Fine"];
+//    PFObject *fine = [Fine currentFine];
+
     
-    fine[@"Jar"] = jar;
-    fine[@"Perp"] = perp;
-    fine[@"Nark"] = nark;
-    fine[@"Fee"] = fee;
-    fine[@"Description"] = description;
+    [Fine currentFine][@"Jar"] = jar;
+    [Fine currentFine][@"Nark"] = nark;
+    [Fine currentFine][@"Fee"] = fee;
+    [Fine currentFine][@"Description"] = description;
     
-    [fine saveInBackground];
+    [[Fine currentFine] saveInBackground];
 }
 
 -(NSNumber *)fineTotal {

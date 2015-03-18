@@ -69,7 +69,7 @@
     [Jar currentJar][@"Members"] = usersArray;
     [Jar currentJar][@"MemberUsernames"] = usernameArray;
     [[Jar currentJar]saveInBackground];
-   // [[JarController sharedInstance] addMembersToJar:usersArray];
+    [[JarController sharedInstance] addMembersToJar:usersArray];
     [self performSegueWithIdentifier:@"addMembers" sender:nil];
     
     
