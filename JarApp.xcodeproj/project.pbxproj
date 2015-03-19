@@ -206,6 +206,7 @@
 			children = (
 				232874641AAA626A00F48B90 /* AppDelegate.h */,
 				232874651AAA626A00F48B90 /* AppDelegate.m */,
+				832910591AB63F66005D5208 /* Main.storyboard */,
 				832C6C3B1AAF9B37002331C0 /* New Group */,
 				832910581AB63966005D5208 /* Custom Login */,
 				2328749E1AAA7B3000F48B90 /* Shelf */,
@@ -261,7 +262,6 @@
 				23D3FAD21AB778840005034F /* AddMembersViewController.m */,
 				23D3FAD41AB7792F0005034F /* AddingMembersTableViewCell.h */,
 				23D3FAD51AB779400005034F /* AddingMembersTableViewCell.m */,
-				832910591AB63F66005D5208 /* Main.storyboard */,
 			);
 			name = Shelf;
 			sourceTree = "<group>";
@@ -402,10 +402,11 @@
 				TargetAttributes = {
 					2328745C1AAA626900F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = CL6YTP7WX7;
+						DevelopmentTeam = N9YM4MAB27;
 					};
 					232874751AAA626A00F48B90 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N9YM4MAB27;
 						TestTargetID = 2328745C1AAA626900F48B90;
 					};
 				};

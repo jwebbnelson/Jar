@@ -43,6 +43,9 @@
     cell.titleLabel.text = self.indexObject[@"Title"];
     cell.cashLabel.text = self.indexObject[@"Total"];
     
+    [cell.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Cell"]]];
+    
+    
     return cell;
 
 }
