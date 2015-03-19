@@ -11,7 +11,7 @@
 #import "NewJarViewController.h"
 #import "JarViewController.h"
 #import <Parse/Parse.h>
-#import "Jar.h"
+#import "JarController.h"
 
 @interface ShelfViewController () <UICollectionViewDelegate>
 
@@ -27,8 +27,6 @@
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
     
-    self.query =[PFQuery queryWithClassName:@"Jar"];
-
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -62,6 +60,7 @@
 - (void)newJarReload {
     [self.collectionView reloadData];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -74,12 +73,27 @@
     viewController.view.alpha = 0.8;
     [[self navigationController] setNavigationBarHidden:YES];
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSArray *objects = [self.query findObjects];
-    Jar *jars = [objects objectAtIndex:indexPath.row];
-    [Jar setCurrentJar:jars];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    ShelfCollectionViewCell *cell = sender;
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+    JarViewController *viewController = segue.destinationViewController;
+    
+    // updateWithJar
+    
+    // view controller needs to run update with jar for self.jar in view did load
+    
+    Jar *jar = [JarController sharedInstance].jars[indexPath.item];
+    
+    viewController.jar = jar;
 }
 
 @end

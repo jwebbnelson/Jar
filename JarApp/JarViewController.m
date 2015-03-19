@@ -25,23 +25,28 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
-    self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[FineController sharedInstance] fineTotal:self.jar] floatValue]];
     
     self.totalLabel.text = self.label;
-    [[Jar currentJar] setObject:self.totalLabel.text forKey:@"Total"];
+    [self.jar setObject:self.totalLabel.text forKey:@"Total"];
 
 }
+- (void)updateWithJar:(NSString *)jarTitle {
+    
+    
+}
+
 - (IBAction)deleteJar:(id)sender {
     //Notification from bottom asking if "you're sure to delete the Jar?"
     UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"DELETE JAR" message:@"Are you sure you want to delete this JAR and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
     [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         
         //delete from Parse >> PUT CODE HERE
-        if ([Jar currentJar]) {
-            [[JarController sharedInstance]deleteFines:[Jar currentJar]];
+        if (self.jar) {
+            [[JarController sharedInstance]deleteFines:self.jar];
             NSLog(@"DELETED FINES");
         }
-        [[JarController sharedInstance]deleteJar:[Jar currentJar]];
+        [[JarController sharedInstance]deleteJar:self.jar];
         NSLog(@"DELETED JAR");
         [self.navigationController popToRootViewControllerAnimated:YES];
         
@@ -53,13 +58,9 @@
     [self presentViewController:deleteController animated:YES completion:nil];
     
 }
-
-
-
-
 - (void)newFineReload {
     
-     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[FineController sharedInstance] fineTotal:self.jar ] floatValue]];
     
     [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
@@ -75,7 +76,6 @@
         [self.tableView reloadData];
     } completion:nil];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -93,8 +93,6 @@
         NSLog(@"Voted Not Fair");
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler: nil]];
- 
-
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
@@ -122,15 +120,5 @@
         viewController.view.transform = CGAffineTransformMakeScale(1, 1);
     }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

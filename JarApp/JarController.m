@@ -7,7 +7,10 @@
 //
 
 #import "JarController.h"
-#import "Jar.h"
+
+@interface JarController ()
+
+@end
 
 @implementation JarController
 
@@ -16,16 +19,19 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[JarController alloc] init];
+        [sharedInstance loadJars];
     });
     return sharedInstance;
 }
 
--(NSArray *)jars {
+-(void)loadJars {
+    
     PFQuery *query = [Jar query];
-
-    [query whereKey:@"ACL" equalTo:[PFUser currentUser]];
-
-    return [query findObjects];
+   
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.jars = objects;
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
+    }];
 }
 
 -(void)addJarWithTitle:(NSString *)title {

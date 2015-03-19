@@ -16,6 +16,6 @@
 +(FineController *)sharedInstance;
 
 -(void)addFineWithDescription:(NSString *)description nark:(PFUser *)nark jar:(Jar *)jar fee:(NSNumber *)fee;
--(NSNumber *)fineTotal;
+-(NSNumber *)fineTotal:(Jar *)jar;
 
 @end

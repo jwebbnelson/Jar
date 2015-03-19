@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "Jar.h"
 
 
 
 @interface JarController : NSObject
 
 @property (nonatomic, strong)PFQuery *queryFines;
-@property (nonatomic, strong, readonly) NSArray *jars;
+@property (nonatomic, strong) NSArray *jars;
 @property (nonatomic, readwrite) float fineTotal;
 
 + (JarController *)sharedInstance;

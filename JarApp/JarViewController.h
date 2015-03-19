@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Jar.h"
 @interface JarViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic,strong) NSString *jarTitle;
+@property (nonatomic,strong) Jar *jar;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+
 
 @end

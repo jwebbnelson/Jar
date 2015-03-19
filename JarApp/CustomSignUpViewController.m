@@ -26,12 +26,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    PFUser *user = [PFUser currentUser];
-    if (user.username != nil) {
-     [self performSegueWithIdentifier:@"signedUp" sender:self];
-    }
-    
+
+- (IBAction)backgoundTap:(id)sender {
+        [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

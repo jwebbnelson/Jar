@@ -12,12 +12,14 @@
 
 @property (nonatomic,strong) NSString *name;
 //@property (nonatomic, strong) NSString *currentJar;
-@property (nonatomic, strong) NSString *jarID;
 
 +(NSString *)parseClassName;
 
 + (void)setCurrentJar:(Jar *)jar;
 
 + (Jar *)currentJar;
+
++ (NSString *)jarID:(Jar*)jar;
+
 
 @end

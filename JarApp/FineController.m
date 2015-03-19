@@ -40,10 +40,10 @@
     [[Fine currentFine] saveInBackground];
 }
 
--(NSNumber *)fineTotal {
+-(NSNumber *)fineTotal:(Jar *)jar {
     self.query = [Fine query];
     
-    [self.query whereKey:@"Jar" equalTo:[Jar currentJar]];
+    [self.query whereKey:@"Jar" equalTo:jar];//[Jar currentJar]];
     
     NSArray *objects = [self.query findObjects];
     
