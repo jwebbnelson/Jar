@@ -55,9 +55,9 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error){
             [self performSegueWithIdentifier:@"signedUp" sender:self];
-            NSLog(@"Registration succeeded");
         } else {
-            NSLog(@"Registration failed");
+            NSString *errorString = [error userInfo][@"error"];
+            NSLog(@"%@",errorString);
         }
     }];
 }

@@ -21,6 +21,9 @@
                                 <rect key="frame" x="26" y="190" width="547" height="30"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d2Q-V2-wqC" id="j2R-qn-zh0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uw-4b-KuY">
                                 <rect key="frame" x="240" y="262" width="109" height="62"/>
@@ -30,8 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="logIn:" destination="d2Q-V2-wqC" eventType="touchUpInside" id="1Vx-6m-uNV"/>
-                                    <segue destination="13r-SL-Tjf" kind="modal" identifier="loggedIn" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="DGw-d8-6mV"/>
+                                    <action selector="logIn:" destination="d2Q-V2-wqC" eventType="touchUpInside" id="s0k-UC-w63"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-Nq-KFY">
@@ -52,6 +54,9 @@
                                 <rect key="frame" x="26" y="228" width="547" height="30"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d2Q-V2-wqC" id="pat-c9-Pmg"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYq-53-C8Q">
                                 <rect key="frame" x="149" y="515" width="290" height="37"/>
@@ -87,6 +92,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Nt7-sY-0np" id="ekG-j2-d4l"/>
                         <outlet property="usernameTextField" destination="4EJ-RC-x4a" id="VBT-f1-S27"/>
+                        <segue destination="13r-SL-Tjf" kind="show" identifier="loggedIn" id="sjt-NL-Z3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ6-oM-egD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,19 +131,20 @@
                                 <rect key="frame" x="37" y="302" width="526" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AsK-6T-xni" id="MVo-X4-4Bb"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="thinJarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-WM-vHg">
                                 <rect key="frame" x="76" y="72" width="449" height="128"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYd-yn-dFc">
-                                <rect key="frame" x="37" y="301" width="526" height="30"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAL-1s-Bbp">
                                 <rect key="frame" x="37" y="346" width="526" height="30"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AsK-6T-xni" id="AkC-Lh-G6a"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LW-aO-JHI">
                                 <rect key="frame" x="6" y="20" width="43" height="37"/>
@@ -171,7 +178,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gRT-Ir-ewV" secondAttribute="trailing" constant="21" id="28y-fY-QvA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fAL-1s-Bbp" secondAttribute="trailing" constant="21" id="7E8-Wu-BJj"/>
                             <constraint firstItem="FbA-PF-sTY" firstAttribute="top" secondItem="84f-B7-bxQ" secondAttribute="bottom" constant="64" id="9tL-TR-HYm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RYd-yn-dFc" secondAttribute="trailing" constant="21" id="C1Q-tm-g8C"/>
                             <constraint firstItem="84f-B7-bxQ" firstAttribute="top" secondItem="dYn-pr-cLW" secondAttribute="bottom" constant="21" id="Gct-9g-umA"/>
                             <constraint firstItem="8f7-WM-vHg" firstAttribute="top" secondItem="wBj-KH-hSD" secondAttribute="bottom" constant="52" id="IFv-pf-L1R"/>
                             <constraint firstItem="FbA-PF-sTY" firstAttribute="centerX" secondItem="84f-B7-bxQ" secondAttribute="centerX" constant="-4.5" id="Kxd-8P-TTz"/>
@@ -193,6 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qfg-uF-UAx"/>
                     <connections>
+                        <outlet property="confirmPassTextField" destination="fAL-1s-Bbp" id="TDm-mn-5H7"/>
                         <outlet property="emailTextField" destination="dYn-pr-cLW" id="vHL-9X-wfa"/>
                         <outlet property="passwordTextField" destination="84f-B7-bxQ" id="MTG-e6-n9P"/>
                         <outlet property="usernameTextField" destination="gRT-Ir-ewV" id="dWr-IV-e5q"/>
@@ -872,7 +879,7 @@
         <image name="thinJarLogo" width="182" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DGw-d8-6mV"/>
+        <segue reference="8wm-Wi-ybY"/>
         <segue reference="2Jq-8x-z2f"/>
     </inferredMetricsTieBreakers>
 </document>
