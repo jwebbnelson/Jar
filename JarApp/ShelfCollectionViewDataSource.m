@@ -34,14 +34,14 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return (NSInteger)[self.query countObjects];
+    return [JarController sharedInstance].jars.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
     ShelfCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
     
-    Jar *jar = [[JarController sharedInstance].jars objectAtIndex:indexPath.item];
+    Jar *jar = [JarController sharedInstance].jars[indexPath.item];
     
     cell.titleLabel.text = jar[@"Title"];
     cell.cashLabel.text = jar[@"Total"];

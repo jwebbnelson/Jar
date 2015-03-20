@@ -25,21 +25,40 @@
 }
 
 -(void)loadJars {
-    
     PFQuery *query = [Jar query];
    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.jars = objects;
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
+        for (Jar *jar in objects) {
+            [jar pin];
+        }
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
     }];
 }
 
+- (NSArray *)jars {
+    PFQuery *query = [Jar query];
+    [query fromLocalDatastore];
+    return [query findObjects];
+}
+
+
 -(void)addJarWithTitle:(NSString *)title {
+    
     Jar *jar = [Jar objectWithClassName:@"Jar"];
     jar[@"Title"] = title;
-    [Jar setCurrentJar:jar];
-    [jar saveInBackground];
-    
+
+    [jar pinInBackground];
+    [jar save];
+}
+
+- (void)deleteJar:(Jar *)jar {
+    [jar unpinInBackground];
+    [jar deleteInBackground];
+}
+
+-(void)updateJar:(Jar *)jar {
+    [jar pinInBackground];
+    [jar save];
 }
 
 -(void)addMembersToJar:(NSArray *)array{
@@ -52,12 +71,6 @@
     }
     
 }
-- (void)deleteJar:(PFObject *)jarObject {
-        PFObject *jar = [PFObject objectWithClassName:@"Jar"];
-        jar = jarObject;
-        [jarObject deleteInBackground];
-        
-    }
 
 - (void)deleteFines:(PFObject *)finesObject{
     self.queryFines = [PFQuery queryWithClassName:@"Fine"];

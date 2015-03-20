@@ -29,6 +29,12 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
+    
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
 }
