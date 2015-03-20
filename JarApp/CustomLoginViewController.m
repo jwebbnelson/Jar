@@ -18,14 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"JarBackground"]]];
-    self.usernameTextField.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"JarBackground"]];
    
 //    if (![[PFUser currentUser].username isEqualToString:@""] && [PFUser currentUser]) {
 //        [self performSegueWithIdentifier:@"loggedIn" sender:self];
 //    }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -72,7 +76,22 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)forgotPassword:(id)sender {
 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Forgot Password?" message:@"Please enter email address to reset" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+            [alert show];
+    
+    
+//    [PFUser requestPasswordResetForEmailInBackground:self.usernameTextField.text block:^(BOOL succeeded, NSError *error) {
+//        if(!error){
+//            //go to sync settings screen
+//        }
+//        else{
+//            NSString *errorString = [error userInfo][@"error"];
+//            NSLog(@"%@",errorString);
+//        }
+//    }];
+}
 
 
 

@@ -18,8 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setNeedsStatusBarAppearanceUpdate];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"JarBackground"]]];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (IBAction)back:(id)sender {
