@@ -26,7 +26,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newJarReload) name:@"jarReload" object:nil];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -80,11 +79,6 @@
     [[self navigationController] setNavigationBarHidden:YES];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     ShelfCollectionViewCell *cell = sender;
@@ -93,13 +87,9 @@
     
     JarViewController *viewController = segue.destinationViewController;
     
-    // updateWithJar
-    
-    // view controller needs to run update with jar for self.jar in view did load
-    
-    Jar *jar = [JarController sharedInstance].jars[indexPath.item];
-    
-    viewController.jar = jar;
+    [viewController updateWithJar:[JarController sharedInstance].jars[indexPath.item]];
+    viewController.totalLabel.text = [JarController sharedInstance].jars[indexPath.item][@"Total"];
+    viewController.index = indexPath.item;
 }
 
 @end

@@ -11,13 +11,10 @@
 @interface Jar : PFObject <PFSubclassing>
 
 @property (nonatomic,strong) NSString *name;
-//@property (nonatomic, strong) NSString *currentJar;
 
 +(NSString *)parseClassName;
 
 + (void)setCurrentJar:(Jar *)jar;
-
-+ (Jar *)currentJar;
 
 + (NSString *)jarID:(Jar*)jar;
 

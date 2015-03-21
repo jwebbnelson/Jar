@@ -23,10 +23,6 @@ static Jar * currentJar;
       return @"Jar";
   }
 
-+ (Jar *)currentJar {
-    return currentJar;
-}
-
 + (NSString *)jarID:(Jar*)jar{
     return [jar objectForKey:@"objectId"];
 }

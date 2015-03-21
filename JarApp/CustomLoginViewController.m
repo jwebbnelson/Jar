@@ -21,10 +21,6 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"JarBackground"]]];
-   
-//    if (![[PFUser currentUser].username isEqualToString:@""] && [PFUser currentUser]) {
-//        [self performSegueWithIdentifier:@"loggedIn" sender:self];
-//    }
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -32,8 +28,10 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated{
-   
+-(void)viewDidAppear:(BOOL)animated{
+    if ([PFUser currentUser] != nil){
+        [self performSegueWithIdentifier:@"loggedIn" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

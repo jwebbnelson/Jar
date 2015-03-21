@@ -378,7 +378,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="rze-SO-R8Z" id="RK3-zd-Baf"/>
+                                    <outlet property="dataSource" destination="9qo-yC-LIB" id="IOQ-dO-Eve"/>
                                     <outlet property="delegate" destination="9qo-yC-LIB" id="OIy-3W-BG0"/>
                                 </connections>
                             </tableView>
@@ -388,15 +388,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoR-F3-GjY">
-                                <rect key="frame" x="0.0" y="238" width="25" height="25"/>
-                                <state key="normal" title="Button" image="plus">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonSelected:" destination="9qo-yC-LIB" eventType="touchUpInside" id="OId-Nr-L66"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-Mg-Cd5">
                                 <rect key="frame" x="8" y="20" width="47" height="43"/>
                                 <constraints>
@@ -419,13 +410,16 @@
                             <constraint firstItem="yoi-Mg-Cd5" firstAttribute="leading" secondItem="Ymh-nb-4ho" secondAttribute="leadingMargin" constant="-8" id="g7v-Ua-DoU"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="4fW-v5-pVd"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="MXy-Yg-3va" id="IKm-nd-3nD"/>
                         <outlet property="totalLabel" destination="TFH-hO-PYr" id="DoJ-xl-yvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyN-hw-ZbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="rze-SO-R8Z" customClass="JarTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1941" y="640"/>
         </scene>
@@ -645,7 +639,6 @@
                                         </state>
                                         <connections>
                                             <action selector="createJar:" destination="zn9-sK-fyv" eventType="touchUpInside" id="NXk-W1-fjr"/>
-                                            <segue destination="d6a-uA-7O2" kind="show" id="q0K-Ae-Lxa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -679,6 +672,7 @@
                     <connections>
                         <outlet property="createJarButton" destination="AWX-y4-kkQ" id="4ee-GW-ffx"/>
                         <outlet property="nameTextField" destination="0zF-6Z-cOv" id="e4s-rp-F6O"/>
+                        <segue destination="d6a-uA-7O2" kind="show" identifier="AddingMembersSegue" id="p3r-KB-fOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pb-Ko-cBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -898,7 +892,6 @@
         <image name="Close-50" width="25" height="25"/>
         <image name="backArrow" width="32" height="29"/>
         <image name="delete" width="140" height="147"/>
-        <image name="plus" width="50" height="50"/>
         <image name="thinJarLogo" width="182" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -8,13 +8,14 @@
 
 #import "JarViewController.h"
 #import "AddFineViewController.h"
-#import "FineController.h"
 #import "JarController.h"
-
+#import "JarTableViewCell.h"
+#import "AddPerpViewController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) NSString *label;
+@property (nonatomic,strong) Jar *jar;
 
 @end
 
@@ -26,15 +27,18 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
-    self.label = [NSString stringWithFormat:@"$%.2f", [[[FineController sharedInstance] fineTotal:self.jar] floatValue]];
+    UIBarButtonItem *addMembers = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"addMembers"] style:UIBarButtonItemStylePlain target:self action:@selector(addFines)];
+    [self.navigationItem setRightBarButtonItem:addMembers];
     
     self.totalLabel.text = self.label;
-    [self.jar setObject:self.totalLabel.text forKey:@"Total"];
-
 }
-- (void)updateWithJar:(NSString *)jarTitle {
+- (void)updateWithJar:(Jar *)jar {
+    self.jar = jar;
+   // [[JarController sharedInstance] loadFines:self.jar];
     
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[JarController sharedInstance] fineTotal:self.jar] floatValue]];
     
+    //[NSString stringWithFormat:@"%@",self.jar[@"Total"];
 }
 
 - (IBAction)deleteJar:(id)sender {
@@ -61,7 +65,7 @@
 }
 - (void)newFineReload {
     
-    self.label = [NSString stringWithFormat:@"$%.2f", [[[FineController sharedInstance] fineTotal:self.jar ] floatValue]];
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[JarController sharedInstance] fineTotal:self.jar ] floatValue]];
     
     [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
@@ -106,8 +110,11 @@
     [self presentViewController:detailAlertController animated:YES completion:nil];
     
 }
-- (IBAction)addButtonSelected:(id)sender {
+- (void)addFines {
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
+
+    AddPerpViewController *perpVC = [AddPerpViewController new];
+    [perpVC updateJar:self.jar];
     
     [self addChildViewController:viewController];
     viewController.view.transform = CGAffineTransformMakeScale(.7, .7);
@@ -120,6 +127,27 @@
     [UIView animateWithDuration:0.4 animations:^{
         viewController.view.transform = CGAffineTransformMakeScale(1, 1);
     }];
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
+    
+    Jar *jar = [[JarController sharedInstance] jars][self.index];
+
+    Fine *fine = jar[@"Fines"][indexPath.row];
+    
+    //TableViewCell text with Fee, Perp and Description.
+    cell.textLabel.text = [NSString stringWithFormat:@"$%@ - %@", fine[@"Fee"], fine[@"Perp"]];
+    cell.detailTextLabel.text = fine[@"Description"];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSArray *fineAmount = [JarController sharedInstance].jars[self.index][@"Fines"];
+    return  fineAmount.count;
 }
 
 @end

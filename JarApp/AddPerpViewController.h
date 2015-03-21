@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Jar.h"
 
 @interface AddPerpViewController : UIViewController <UITableViewDataSource>
+
+@property (nonatomic, strong) Jar *jar;
+
+-(void)updateJar:(Jar *)jar;
 
 @end

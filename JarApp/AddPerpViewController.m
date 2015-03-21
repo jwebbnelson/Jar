@@ -13,6 +13,8 @@
 
 @interface AddPerpViewController () <UITableViewDelegate>
 
+
+
 @end
 
 @implementation AddPerpViewController
@@ -27,17 +29,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)updateJar:(Jar *)jar {
+    self.jar = jar;
+}
+
 -(NSArray *)memberQuery{
-    
-    return [Jar currentJar][@"MemberUsernames"];
-     
+    return self.jar[@"MemberUsernames"];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"perpCell"];
-    cell.textLabel.text = [Jar currentJar][@"MemberUsernames"][indexPath.row];
+    cell.textLabel.text = [self memberQuery][indexPath.row];
     return cell;
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
