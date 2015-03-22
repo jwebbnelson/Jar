@@ -12,7 +12,7 @@
 #import "JarTableViewCell.h"
 #import "AddPerpViewController.h"
 
-@interface JarViewController () <UITableViewDelegate>
+@interface JarViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSString *label;
 @property (nonatomic,strong) Jar *jar;
@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
@@ -112,10 +114,9 @@
 }
 - (void)addFines {
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
-
-    AddPerpViewController *perpVC = [AddPerpViewController new];
-    [perpVC updateJar:self.jar];
     
+    [viewController updateJar:self.jar];
+
     [self addChildViewController:viewController];
     viewController.view.transform = CGAffineTransformMakeScale(.7, .7);
     [self.view addSubview:viewController.view];
@@ -146,6 +147,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSArray* jars = self.jar[@"Fines"];
     NSArray *fineAmount = [JarController sharedInstance].jars[self.index][@"Fines"];
     return  fineAmount.count;
 }

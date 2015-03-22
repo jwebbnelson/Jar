@@ -9,13 +9,13 @@
 #import "AddFineViewController.h"
 #import "Fine.h"
 #import "JarViewController.h"
-#import "Jar.h"
 #import "JarController.h"
+#import "AddPerpViewController.h"
 
 @interface AddFineViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSNumber *stepperValue;
-
+@property (nonatomic, strong) Jar *jar;
 @end
 
 @implementation AddFineViewController
@@ -32,7 +32,9 @@
 //    [self.baseView setAlpha:.5];
 }
 
-
+-(void)updateJar:(id)jar{
+    self.jar = jar;
+}
 
 - (IBAction)sliderChanged:(id)sender {
     float sliderValue = self.fineSlider.value;
@@ -51,8 +53,8 @@
 
 - (IBAction)submitFine:(id)sender {
 
-//    [[JarController sharedInstance] addFineWithDescription:self.descriptionTextField.text nark:[PFUser currentUser] jar:[Jar currentJar] fee:self.stepperValue];
-
+// We need to add the fine to the Fines in parse
+//
     [[NSNotificationCenter defaultCenter]postNotificationName:@"fineReload" object:nil];
     
     [self.descriptionTextField resignFirstResponder];
@@ -71,14 +73,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
+    AddPerpViewController *desitnationVC = (AddPerpViewController *)segue.destinationViewController;
+    [desitnationVC updateJar:self.jar];
+    NSLog(@"going to add perp");
 }
-*/
 
 @end

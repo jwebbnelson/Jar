@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ASValueTrackingSlider.h"
+#import "Jar.h"
 
 @interface AddFineViewController : UIViewController
 
@@ -16,5 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *perpTextField;
 @property (strong, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (readwrite, nonatomic) IBOutlet ASValueTrackingSlider *fineSlider;
+
+-(void) updateJar:(Jar *) jar;
 
 @end
