@@ -81,7 +81,6 @@
     if(searchText.length == 0)
     {
         self.isFiltered = NO;
-        
     }
     else
     {
