@@ -11,11 +11,14 @@
 #import "ShelfViewController.h"
 #import <Parse/Parse.h>
 #import <stdlib.h>
+#import "Jar.h"
+#import "JarController.h"
 
 @interface ShelfCollectionViewDataSource ()
 
 @property (nonatomic, strong) PFQuery *query;
 @property (nonatomic, strong) PFObject *indexObject;
+@property (nonatomic, strong) NSArray *objects;
 
 
 @end
@@ -25,26 +28,26 @@
 -(instancetype)init {
     self = [super init];
     if (self){
-        self.query =[PFQuery queryWithClassName:@"Jar"];
+
     }
     return  self;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return (NSInteger)[self.query countObjects];
-    
+    return [JarController sharedInstance].jars.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    ShelfCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
-    NSArray *objects = [self.query findObjects];
-    self.indexObject = [objects objectAtIndex:indexPath.row];
-    cell.titleLabel.text = self.indexObject[@"Title"];
-    cell.cashLabel.text = self.indexObject[@"Total"];
-    
-    return cell;
 
+    ShelfCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    
+    Jar *jar = [JarController sharedInstance].jars[indexPath.item];
+    
+    cell.titleLabel.text = jar[@"Title"];
+    cell.cashLabel.text = jar[@"Total"];
+    [cell.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Cell"]]];
+
+    return cell;
 }
 
 - (IBAction)deleteJar:(id)sender {
@@ -56,7 +59,7 @@
         NSLog(@"Began");
     }else if (delete.state == UIGestureRecognizerStateEnded) {
         
-        ShelfViewController *viewController = [ShelfViewController new];
+  //      ShelfViewController *viewController = [ShelfViewController new];
 //        #error Need to identify the indexPath of the cell selected.
 //      [viewController deleteJarWithID:self.indexObject];
         

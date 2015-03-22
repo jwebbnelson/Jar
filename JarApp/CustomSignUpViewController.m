@@ -17,14 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"JarBackground"]]];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    PFUser *user = [PFUser currentUser];
-    if (user.username != nil) {
-     [self performSegueWithIdentifier:@"signedUp" sender:self];
-    }
-    
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (IBAction)backgoundTap:(id)sender {
+        [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,9 +60,9 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error){
             [self performSegueWithIdentifier:@"signedUp" sender:self];
-            NSLog(@"Registration succeeded");
         } else {
-            NSLog(@"Registration failed");
+            NSString *errorString = [error userInfo][@"error"];
+            NSLog(@"%@",errorString);
         }
     }];
 }

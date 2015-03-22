@@ -10,11 +10,13 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import "JarController.h"
+#import "AddingMembersViewController.h"
 
 @interface NewJarViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *createJarButton;
+@property (strong, nonatomic) Jar *jar;
 
 @end
 
@@ -34,6 +36,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)dismissPopOver:(id)sender {
     self.view.alpha = 0;
     [[self navigationController]setNavigationBarHidden:NO];
@@ -41,15 +44,20 @@
 
 }
 - (IBAction)createJar:(id)sender {    
-    
     [[JarController sharedInstance] addJarWithTitle:self.nameTextField.text];
+    
+    self.jar = [[[JarController sharedInstance] jars] lastObject];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:@"jarReload" object:nil];
     
     [self dismissPopOver:nil];
-    
+    [self performSegueWithIdentifier:@"AddingMembersSegue" sender:sender];
 }
-- (IBAction)addJarMemebers:(id)sender {
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddingMembersViewController *vc = (AddingMembersViewController *)[segue destinationViewController];
+    [vc updateWithJar:self.jar];
 }
 
 /*

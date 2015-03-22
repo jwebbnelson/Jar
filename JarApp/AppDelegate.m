@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Fine.h"
+#import "Jar.h"
 
 
 @interface AppDelegate ()
@@ -25,6 +26,7 @@
     [Parse enableLocalDatastore];
 
     [Fine registerSubclass];
+    [Jar registerSubclass];
     
     // Initialize Parse.
     [Parse setApplicationId:@"SEGFnPwQoJCeVQP6xNKRQzqIQ9uOLPULgi7XscK9"

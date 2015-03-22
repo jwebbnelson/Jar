@@ -18,14 +18,13 @@ static Jar * currentJar;
 
 //@dynamic currentJar;
 @dynamic name;
-@dynamic jarID;
 
  + (NSString *)parseClassName {
       return @"Jar";
   }
 
-+ (Jar *)currentJar {
-    return currentJar;
++ (NSString *)jarID:(Jar*)jar{
+    return [jar objectForKey:@"objectId"];
 }
 
 + (void)setCurrentJar:(Jar *)jar {

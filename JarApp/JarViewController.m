@@ -8,12 +8,14 @@
 
 #import "JarViewController.h"
 #import "AddFineViewController.h"
-#import "FineController.h"
 #import "JarController.h"
+#import "JarTableViewCell.h"
+#import "AddPerpViewController.h"
 
 @interface JarViewController () <UITableViewDelegate>
 
 @property (strong, nonatomic) NSString *label;
+@property (nonatomic,strong) Jar *jar;
 
 @end
 
@@ -25,23 +27,31 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFineReload) name:@"fineReload" object:nil];
     
-    self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    UIBarButtonItem *addMembers = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"addMembers"] style:UIBarButtonItemStylePlain target:self action:@selector(addFines)];
+    [self.navigationItem setRightBarButtonItem:addMembers];
     
     self.totalLabel.text = self.label;
-    [[Jar currentJar] setObject:self.totalLabel.text forKey:@"Total"];
-
 }
+- (void)updateWithJar:(Jar *)jar {
+    self.jar = jar;
+   // [[JarController sharedInstance] loadFines:self.jar];
+    
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[JarController sharedInstance] fineTotal:self.jar] floatValue]];
+    
+    //[NSString stringWithFormat:@"%@",self.jar[@"Total"];
+}
+
 - (IBAction)deleteJar:(id)sender {
     //Notification from bottom asking if "you're sure to delete the Jar?"
     UIAlertController *deleteController = [UIAlertController alertControllerWithTitle:@"DELETE JAR" message:@"Are you sure you want to delete this JAR and its Fines?" preferredStyle:UIAlertControllerStyleActionSheet];
     [deleteController addAction:[UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         
         //delete from Parse >> PUT CODE HERE
-        if ([Jar currentJar]) {
-            [[JarController sharedInstance]deleteFines:[Jar currentJar]];
+        if (self.jar) {
+            [[JarController sharedInstance]deleteFines:self.jar];
             NSLog(@"DELETED FINES");
         }
-        [[JarController sharedInstance]deleteJar:[Jar currentJar]];
+        [[JarController sharedInstance]deleteJar:self.jar];
         NSLog(@"DELETED JAR");
         [self.navigationController popToRootViewControllerAnimated:YES];
         
@@ -53,13 +63,9 @@
     [self presentViewController:deleteController animated:YES completion:nil];
     
 }
-
-
-
-
 - (void)newFineReload {
     
-     self.label = [NSString stringWithFormat:@"$%.2f", [[FineController sharedInstance].fineTotal floatValue]];
+    self.label = [NSString stringWithFormat:@"$%.2f", [[[JarController sharedInstance] fineTotal:self.jar ] floatValue]];
     
     [UIView animateWithDuration:1 animations:^{
         self.totalLabel.alpha = 0;
@@ -75,7 +81,6 @@
         [self.tableView reloadData];
     } completion:nil];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -93,8 +98,6 @@
         NSLog(@"Voted Not Fair");
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler: nil]];
- 
-
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
@@ -107,8 +110,11 @@
     [self presentViewController:detailAlertController animated:YES completion:nil];
     
 }
-- (IBAction)addButtonSelected:(id)sender {
+- (void)addFines {
     AddFineViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddFineVC"];
+
+    AddPerpViewController *perpVC = [AddPerpViewController new];
+    [perpVC updateJar:self.jar];
     
     [self addChildViewController:viewController];
     viewController.view.transform = CGAffineTransformMakeScale(.7, .7);
@@ -123,14 +129,25 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    JarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jarCell" forIndexPath:indexPath];
+    
+    Jar *jar = [[JarController sharedInstance] jars][self.index];
+
+    Fine *fine = jar[@"Fines"][indexPath.row];
+    
+    //TableViewCell text with Fee, Perp and Description.
+    cell.textLabel.text = [NSString stringWithFormat:@"$%@ - %@", fine[@"Fee"], fine[@"Perp"]];
+    cell.detailTextLabel.text = fine[@"Description"];
+    
+    return cell;
 }
-*/
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSArray *fineAmount = [JarController sharedInstance].jars[self.index][@"Fines"];
+    return  fineAmount.count;
+}
 
 @end
